@@ -231,3 +231,20 @@ let newSwiper = new Swiper('.news .con', {
     },
     spaceBetween: 50,
 })
+
+window.addEventListener("scroll", function () {
+    const fixBox = document.querySelector(".fix_box");
+    const triggerHeight = 600; // 메인 비주얼 높이에 맞게 조정
+
+    if (window.scrollY > triggerHeight) {
+        fixBox.classList.add("show");
+    } else {
+        fixBox.classList.remove("show");
+    }
+});
+
+// 부드러운 Top 이동
+document.getElementById("btnTop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});

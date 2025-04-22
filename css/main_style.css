@@ -264,7 +264,8 @@ main h2 {
 
 #con3 {
   width: 100%;
-  height: auto;
+  height: 150vh;
+  background: url(../img/rainbow_bg.png) center/cover no-repeat;
   /* background: url(../img/bg2.jpg) no-repeat; */
   background-position: center;
   overflow: hidden;
@@ -284,8 +285,9 @@ main h2 {
   height: 100vh;
   position: absolute;
   z-index: -1;
+  background: url(../img/rainbow_bg.png) center/cover no-repeat;
   /* background-image: url(../img/bg3.png); */
-  /* opacity: 0.15; */
+  opacity: 0.15;
 }
 
 #con3 #canvas2 {
@@ -634,7 +636,6 @@ main h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../img/hover.png) bottom no-repeat;
   background-size: contain;
   opacity: 0;
   transition: opacity 0.3s ease;

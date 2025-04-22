@@ -1,139 +1,57 @@
 @charset "utf-8";
 
-html,
-body {
+body, html {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   height: 100%;
-  background: #222;
+  font-family: sans-serif;
+}
+
+/* 무지개 오버레이 */
+#rainbow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  animation: rainbowFade 3s ease-in-out forwards;
 }
 
-.loader-wrapper {
-  text-align: center;
+#rainbow-overlay img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
 }
 
-/* 텍스트 한 글자씩 페이드 인 */
-.animated-text span {
-  display: inline-block;
-  opacity: 0;
-  color: var(--main-color-wh);
-  font-size: 2rem;
-  animation: fadeIn 0.6s forwards;
-}
-
-.animated-text span:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.animated-text span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.animated-text span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.animated-text span:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.animated-text span:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.animated-text span:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.animated-text span:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.animated-text span:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-/* 공백 */
-.animated-text span:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.animated-text span:nth-child(10) {
-  animation-delay: 1.0s;
-}
-
-.animated-text span:nth-child(11) {
-  animation-delay: 1.1s;
-}
-
-.animated-text span:nth-child(12) {
-  animation-delay: 1.2s;
-}
-
-.animated-text span:nth-child(13) {
-  animation-delay: 1.3s;
-}
-
-.animated-text span:nth-child(14) {
-  animation-delay: 1.4s;
-}
-
-@keyframes fadeIn {
-  to {
+/* 걷히는 애니메이션 */
+@keyframes rainbowFade {
+  0% {
     opacity: 1;
   }
-}
-
-/* 도트 애니메이션 */
-.dots {
-  margin-top: 20px;
-}
-
-.dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 4px;
-  background: var(--main-color-or);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: pulse 1.2s ease-in-out infinite;
-}
-
-.dots span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.dots span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dots span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.dots span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.dots span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-@keyframes pulse {
-
-  0%,
   100% {
-    opacity: 0.3;
-    transform: scale(0.9);
+    opacity: 0;
   }
+}
 
-  50% {
-    opacity: 1;
-    transform: scale(1.3);
-  }
+/* 본문은 처음에 안 보이게 */
+#main-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  padding: 100px;
+}
+
+/* 무지개 걷히고 본문 등장 */
+body.loaded #main-content {
+  opacity: 1;
+  transform: translateY(0);
 }
