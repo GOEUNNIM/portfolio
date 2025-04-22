@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iloom</title>
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- 내꺼보다 위에 -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- 구글 Material 아이콘 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+    <!-- 제이쿼리보다 밑에 내꺼보단 위에 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <script src="js/common.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap" data-scroll-container>
+        <header id="header">
+            <h1><a href="#"><img src="img/gnb_logo.png" alt="일룸"></a></h1>
+            <nav class="">
+                <div class="nav_bg"></div>
+                <ul class="gnb">
+                    <li><a href="#">침실</a>
+                        <ul>
+                            <li><a href="#">침대</a></li>
+                            <li><a href="#">매트리스</a></li>
+                            <li><a href="#">드레스룸</a></li>
+                            <li><a href="#">수납장</a></li>
+                            <li><a href="#">화장대</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">거실</a>
+                        <ul>
+                            <li><a href="#">테이블</a></li>
+                            <li><a href="#">거실장</a></li>
+                            <li><a href="#">소파</a></li>
+                            <li><a href="#">수잡장</a></li>
+                            <li><a href="#">액세서리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">주방</a>
+                        <ul>
+                            <li><a href="#">식탁</a></li>
+                            <li><a href="#">식탁의자</a></li>
+                            <li><a href="#">식탁세트</a></li>
+                            <li><a href="#">수납장</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">키즈룸</a>
+                        <ul>
+                            <li><a href="#">침대</a></li>
+                            <li><a href="#">Diary</a></li>
+                            <li><a href="#">K-Brand</a></li>
+                            <li><a href="#">community</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="r_menu">
+                <div class="sel">
+                    <p><strong>KOR</strong><span class="material-symbols-outlined">keyboard_arrow_down</span></p>
+                    <ul>
+                        <li><a href="#"><strong>ENG</strong></a></li>
+                        <li><a href="#"><strong>JPN</strong></a></li>
+                    </ul>
+                </div><!-- //.sel -->
+            </div><!-- //.r_menu -->
+        </header>
+        <main>
+            <div class="custom_cursor"></div>
+            <section class="main_visual">
+                <!-- swiper는 기준이 되는 부모두고 그 밑에서부터 넣기 -->
+                <div class="main_slide_wrap swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide main1"><a href="#">
+                                <div class="tit">
+                                    <p>GLEN</p>
+                                    <h2><span>나만의 감각적인 홈라이브러리</span> 글렌</h2>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main2"><a href="#">
+                                <div class="tit">
+                                    <p>BASEL</p>
+                                    <h2><span>세련된 화이트 호텔 침실 인테리어</span> 바젤</h2>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main3"><a href="#">
+                                <div class="tit">
+                                    <p>DOODLE</p>
+                                    <h2><span>무엇이든 펼칠 수 있는 공간</span> 두들</h2>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div><!-- //.main_slide_wrap -->
+
+                <!-- 커스텀 페이지네이션 -->
+                <div class="vertical-pagination">
+                    <!-- 현재 슬라이드 번호 -->
+                    <div class="num"><span class="swiper-pagination-current">01</span> / 03</div>
+
+                    <!-- 중앙 세로라인(진행도 표시) -->
+                    <div class="swiper-pagination-line">
+                        <!-- 실제로 채워질 부분 -->
+                        <div class="swiper-pagination-line-fill"></div>
+                    </div>
+
+                    <!-- 위/아래 화살표(버튼) -->
+                    <div class="swiper-pagination-buttons">
+                        <span class="prev">▲</span>
+                        <span class="next">▼</span>
+                    </div>
+                </div><!-- //.vertical-pagination -->
+            </section>
+
+            <section class="txt_area">
+                <h2>
+                    <strong class="tit"><span>구성원</span>들이 <span>꿈을 실현</span>할 수 있고<br>
+                        고객과 주주에게는 <span>지속 가능한 가치</span>를 제공하며,</strong>
+                    <b class="tit">사회의 일원으로서 <span>책임</span>을 다하는</b>
+                    <em class="tit">바르고 <span>좋은 회사</span>를 만든다.</em>
+                </h2>
+            </section>
+
+            <section class="vision">
+                <div class="sticky">
+                    <div class="sticky_title">
+                        <div class="bg">STORY</div>
+                        <ul class='list'>
+                            <li>
+                                우리는 사람과 공간을 이어주는 제품과 서비스를 제공하여 다양한 생활환경에서 보다 많은 사람들의 삶의 질을 향상시킬 수 있도록 한다.
+                            </li>
+                            <li>
+                                우리는 전문 기업으로서 관련 사업의 발전에 공헌하고 세계 일류 기업을 추구한다.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s_tit">
+                        <h2 class="">BRAND STORY</h2>
+                        <p>라이프스타일에 따라 자유롭게 변화하고<br>
+                            튼튼하면서도 감각적인 디자인의 가구를 하나하나 직접 설계하고,<br>
+                            제대로 만들어 더 나은 생활을 완성합니다.
+                        </p>
+                    </div>
+                    <div class="sticky_con">
+                        <ul class="card_frame">
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>디자인</h3>
+                                    <p>보기에 아름다운<br>디자인은 기본</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>직접 설계</h3>
+                                    <p>직접 설계해 제대로 만든 가구,<br>일룸 뿐이니까.</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>친환경</h3>
+                                    <p>2011년부터 브랜드 가구<br> 최초 E0 목재 전면 사용</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section><!-- //.vision -->
+
+            <section class="special_product">
+                <div class="s_tit">
+                    <h2 class="">iloom magazine</h2>
+                    <p>번뜩이는 영감과 재밌는 이야기로 가득찬 <br>
+                       일룸 매거진을 만나보세요.
+                    </p>
+                </div><!-- //.s_tit -->
+                <ul>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p1.png" alt=""></div>
+                        <div class="name">
+                            <strong>꿀잠을 위한 데일리 루틴 (④ 심리적 안정감 찾기)</strong>
+                            <p>#침실 #숙면 #침대 #매트리스</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p2.png" alt=""></div>
+                        <div class="name">
+                            <strong>꿀잠을 위한 데일리 루틴(③운동)편</strong>
+                            <p>#침실 #숙면 #침대 #매트리스</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p3.png" alt=""></div>
+                        <div class="name">
+                            <strong>꿀잠을 위한 데일리 루틴(②식습관)편</strong>
+                            <p>#침실 #숙면 #침대 #매트리스</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p4.png" alt=""></div>
+                        <div class="name">
+                            <strong>꿀잠을 위한 데일리 루틴(①수면환경)편</strong>
+                            <p>#침실 #숙면 #침대 #매트리스</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p5.png" alt=""></div>
+                        <div class="name">
+                            <strong>신혼부부의 집 꾸리기 A to Z</strong>
+                            <p>#신혼집 #인테리어 #가구쇼핑</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p6.png" alt=""></div>
+                        <div class="name">
+                            <strong>HOW TO USE VANCOUVER 편안함 찾기</strong>
+                            <p>#거실 #소파고르기 #밴쿠버</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p7.png" alt=""></div>
+                        <div class="name">
+                            <strong>변치 않는 학생방의 정석</strong>
+                            <p>#뉴트 #로이 #링키플러스</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p8.png" alt=""></div>
+                        <div class="name">
+                            <strong>홈파티의 기술</strong>
+                            <p>#다이닝룸 #홈파티 #컨벤셔널 #센서티브 #식탁</p>
+                        </div>
+                    </li>
+                </ul>
+            </section><!-- //.special_product -->
+
+            <section class="business">
+                <div class="s_tit">
+                    <h2>Series</h2>
+                    <p>다양한 분야의 디자인 컨셉을 통해<br>좀 더 윤택한 삶을 지향 합니다.</p>
+                    </p>
+                    <div class="btn">
+                        <span class="material-symbols-outlined prev">
+                            west
+                        </span>
+                        <span class="material-symbols-outlined next">
+                            east
+                        </span>
+                    </div>
+                </div><!-- //.s_tit -->
+                <div class="slide swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b1.png" alt=""></div>
+                                <div class="txt_box">
+                                    <span>U R B A N I</span>
+                                    <h3>고급스러운 디자인에 활용성을<br>더한 침실, 어바니</h3>
+                                    <p>실용성을 토대로 고급스러운 디자인을 표현 했습니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#고급</li>
+                                            <li>#고급스러운</li>
+                                            <li>#luxurious</li>
+                                            <li>#실용성</li>
+                                            <li>#URBANI</li>
+                                            <li>#어바니</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b2.png" alt=""></div>
+                                <div class="txt_box">
+                                    <span>C A I R O</span>
+                                    <h3>부드러운 작동감과 안락하고 고급스러운<br>분위기의 세련된 리클라이너 소파, 카이로</h3>
+                                    <p>인체공학적으로 개발하여 안락하고 고급스러운 리클라이너 소파 입니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#리클라이너</li>
+                                            <li>#recliner</li>
+                                            <li>#카이로</li>
+                                            <li>#cairo</li>
+                                            <li>#소파</li>
+                                            <li>#리클라이너 소파</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b3.png" alt=""></div>
+                                <div class="txt_box">
+                                    <span>S T R I N G</span>
+                                    <h3>슬림한 철제 프레임을 언밸런스한 구조로<br>포인트를 더한 소파테이블, 스트링</h3>
+                                    <p>프레임은 스크레치에 강하며, 광이 없는 매트한 질감의 마감으로 고급스러운 느낌을 줍니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#테이블</li>
+                                            <li>#table</li>
+                                            <li>#스트링</li>
+                                            <li>#string</li>
+                                            <li>#매트</li>
+                                            <li>#유리상판</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b4.png" alt=""></div>
+                                <div class="txt_box">
+                                    <span>M I E L</span>
+                                    <h3>모던하고 내추럴하게 꾸민<br>아늑한 신혼침실, 미엘</h3>
+                                    <p>트렌디한 내추럴 우드와 은은한 컬러 포인트가 매력적인 공간을 연출 합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#내추럴</li>
+                                            <li>#natural</li>
+                                            <li>#미엘</li>
+                                            <li>#miel</li>
+                                            <li>#우드</li>
+                                            <li>#은은한한</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b5.png" alt=""></div>
+                                <div class="txt_box">
+                                    <span>R O Y</span>
+                                    <h3>감각적이고 자유로운 예비<br>창작자들을 위한 학생방, 로이</h3>
+                                    <p>아이의 학습 스타일에 따라 다양한 배치가 가능한 자유로운 분위기의 로이 학생방 시리즈즈</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#학생</li>
+                                            <li>#student</li>
+                                            <li>#로이</li>
+                                            <li>#roy</li>
+                                            <li>#자유로운</li>
+                                            <li>#학생방</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!-- //.business -->
+
+            <section class="vid">
+                <div class="s_tit">
+                    <h2 class="">No.1 Lifestyle<br>
+                        For a better everyday</h2>
+                    <p>당신의 라이프스타일에 대한 깊은 이해와 높은 전문성을 바탕으로<br>
+                        라이프스타일에 따라 자유롭게 변화하고,<br>
+                        튼튼하면서도 감각적인 디자인의 가구를 하나하나 직접 설계하고,<br>
+                        제대로 만들어 더 나은 생활을 완성합니다.</p>
+                </div><!-- //.s_tit -->
+                <figure class="vid_box">
+                    <video src="img/vid1.mp4" loop autoplay muted playsinline></video>
+                </figure>
+            </section><!-- //.vid -->
+
+            <section class="trust">
+                <div class="s_tit">
+                    <h2>Event</h2>
+                    <p>일룸의 새로운 이벤트<br>참여하고 혜택 많이 받아보세요!</p>
+                </div><!-- //.s_tit -->
+                <div class="con">
+                    <ul>
+                        <li class="sl1"><a href="#">
+                                <h3>봄봄 프로모션션</h3>
+                                <p>새로운 시작, 새봄의 설렘을 가구에 담다</p>
+                            </a></li>
+                        <li class="sl2"><a href="#">
+                                <h3>신혼 고객 혜택</h3>
+                                <p>신혼/웨딩 고객을 위한 혜택을 지금 만나보세요.</p>
+                            </a></li>
+                        <li class="sl3"><a href="#">
+                                <h3>당신은 무엇에 진심인가요?</h3>
+                                <p>일상에 새로운 기대감과 설렘을 더하기 위해 누구보다 다정하게, 깊게, 한발 앞서 고민했던 일룸이 배우 변우석과 함께 새로운 캠페인을 시작합니다.</p>
+                            </a></li>
+                    </ul>
+                </div><!-- //.con -->
+            </section><!-- //.trust -->
+
+            <section class="news">
+                <div class="s_tit">
+                    <h2>#나의 <span>일룸생활</span></h2>
+                    <p>일룸으로 달라진 <br>특별한 생활을 만나보세요.</p>
+                    <a href="#" class="more">View More &gt;</a>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="con swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t1.jpg" alt=""></div>
+                                <p class="txt">태희님의 일룸생활</p>
+                                <span>오래 쓰고 싶어서 화이트톤을 찾고 있었는데 디테일까지 튼튼하게 잘 만들어져 있더라고요. 그전에는 링키플러스를 잘 쓰고 있었는데 8년을 써도 변함없이
+                                    튼튼했어요. 역시 일룸이라서 오래 쓸 것 같아요~!</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t2.png" alt=""></div>
+                                <p class="txt">여진님의 일룸생활</p>
+                                <span>일룸 밴쿠버 소파를 사용한지 한달이 넘어간다. 소파 사이즈나 색감, 활용도에 대한 문의가 있어서 이를 중점적으로 돌이켜 생각해 보았다.</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t3.jpg" alt=""></div>
+                                <p class="txt">
+                                    서현님의 일룸생활
+                                </p>
+                                <span>높이 조절이 가능하다는 특징이 이 테이블의 최대 장점이라 주방, 거실, 서재 등 다양한 공간에서 활용할 수 있는데 저는 거실에 두어 거실을
+                                    다이닝룸처럼 사용하고 있어요.</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t4.jpg" alt=""></div>
+                                <p class="txt">
+                                    숙경님의 일룸생활
+                                </p>
+                                <span>설치 후 첫 느낌은 깔끔하고 심플한 디자인과
+                                    블랙컬러의 조화가 그려봤던 느낌보다
+                                    훨씬 인테리어와 잘 어울려 대만족~중이랍니다.</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t5.jpg" alt=""></div>
+                                <p class="txt">
+                                    은지님의 일룸생활
+                                </p>
+                                <span>어쩜 이렇게 깔끔하고 크고 이뻐보일수 있는거죠?
+                                    사실은 더마음에 드는게 있었는데 이방에는 바젤이 어울릴꺼같아서 주문했어요. 배송 오래기다린보람이 있네요! 너무 예쁩니다! 패널도 주문할까 고민중입니다. </span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t6.jpg" alt=""></div>
+                                <p class="txt">
+                                    하연님의 일룸생활
+                                </p>
+                                <span>매장갔더니 일룸거울 하나같이 크고 너무예뻐보이길래 그립서랍장에 올려보았어요! 같이 있으니 더 예쁘고 대만족이예요!</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t7.jpg" alt=""></div>
+                                <p class="txt">
+                                    윤지님의 일룸생활
+                                </p>
+                                <span>침대사면서 같이 구매 해봤는데 찰떡같이 잘어울려요 예뻐요! 드레스룸에있는 서랍장으론 부족했는데 방사이즈에 딱이고 넉넉하니좋아요!</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/t8.jpg" alt=""></div>
+                                <p class="txt">
+                                    미진님의 일룸생활
+                                </p>
+                                <span>예쁘게 꾸며주고싶어서 멀티장도 같이넣어봤어요.
+                                    로이옷장하고 잘어울리고, 실용적일거같고 뒤쪽 옷걸이엔 교복만 딱 걸어놓으니 딱이더라구요. </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!-- //.news -->
+        </main>
+
+        <footer>
+            <h3>Contact Us</h3>
+            <p>여러분의 성장을 함께하는<br>
+                UI/UX 디자인 스튜디오 <span>율쌤 컴퍼니</span>입니다.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
