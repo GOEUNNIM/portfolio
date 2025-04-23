@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 /* 한글 손글씨 느낌 폰트 */
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -28,11 +29,11 @@ body, html {
   transition: opacity 0.7s ease;
 }
 
-.hide-canvas {
+/* .hide-canvas {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-}
+} */
 
 #mouse-overlay {
   position: absolute;
@@ -142,8 +143,8 @@ main h2 {
 }
 
 #con2 ul.ellipse li:nth-child(3) {
-  width: 450px;
-  height: 450px;
+  width: 380px;
+  height: 380px;
   bottom: 150px;
   right: 400px;
   background: var(--main-color-wh);
@@ -177,7 +178,7 @@ main h2 {
 /* information 이력들 */
 #information {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   padding: 0 200px;
@@ -202,6 +203,12 @@ main h2 {
   font-size: 14px;
   font-weight: 200;
   color: var(--sub-color-gray);
+}
+
+.infor_all {
+  width: 100%;
+  display: flex;
+  gap: 50px;
 }
 
 .infor {
@@ -270,12 +277,170 @@ main h2 {
 
 #con3 {
   width: 100%;
-  height: 150vh;
-  background: url(../img/rainbow_bg.png) center/cover no-repeat;
-  /* background: url(../img/bg2.jpg) no-repeat; */
   background-position: center;
   overflow: hidden;
   position: relative;
+  padding-top: 150px;
+}
+
+
+
+/* 장점 부분 */
+#con3 article.have {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color-bk);
+  text-align: center;
+  padding-top: 150px;
+  /* padding: 200px 0 100px 0; */
+}
+
+#con3 article.have h3 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+/* 가운데 텍스트 */
+#con3 article.have .list h2 {
+  padding-top: 150px;
+  font-size: 10rem;
+  font-weight: 600;
+  opacity: 0.1;
+  line-height: 1.2;
+  z-index: 0;
+  position: relative;
+  background: linear-gradient(96deg, rgba(255, 0, 0, 0.60) 1.8%, rgba(249, 76, 16, 0.60) 18.8%, rgba(255, 178, 0, 0.60) 35.79%, rgba(0, 128, 0, 0.60) 57.98%, rgba(0, 0, 255, 0.60) 77.34%, rgba(75, 0, 82, 0.60) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* 카드 스택 wrapper: 위치 고정 및 중앙 정렬 */
+.card_stack_wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+}
+
+/* 카드 스택 본체: 중앙에 절대 위치 */
+.card_stack {
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 기본 카드 상태: 겹쳐진 카드 */
+.card_stack li {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  padding: 50px 10px;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(0);
+  /* 초기 회전값 */
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* 각 아이콘 클래스에 이미지 배경 적용 */
+.img.camera {
+  background-image: url('../img/icon_camera.png');
+}
+
+.img.cooking {
+  background-image: url('../img/icon_cooking.png');
+}
+
+.img.music {
+  background-image: url('../img/icon_music.png');
+}
+
+.card_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  /* ← 이거 하나면 여백 깔끔하게 해결! */
+}
+
+.card_stack li span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card_stack li p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  word-break: keep-all;
+  /* 단어 단위로 줄바꿈 (한국어 가독성 향상) */
+}
+
+.card_stack li:nth-child(1) {
+  transform: rotate(-12deg);
+}
+
+.card_stack li:nth-child(2) {
+  transform: rotate(-3deg);
+}
+
+.card_stack li:nth-child(3) {
+  transform: rotate(10deg);
+}
+
+
+/* active 클래스가 붙었을 때 펼쳐짐 */
+.card_stack.active li:nth-child(1) {
+  transform: translateX(-600px) rotate(-12deg);
+  box-shadow: 2px 2px 10px var(--sub-color-or);
+  transition: transform 0.8s 0.2s ease, opacity 0.8s 0.2s ease;
+}
+
+.card_stack.active li:nth-child(2) {
+  transform: translateX(0) rotate(-3deg);
+  box-shadow: 2px 2px 10px var(--sub-color-gr);
+  transition: transform 0.8s 0.4s ease, opacity 0.8s 0.4s ease;
+}
+
+.card_stack.active li:nth-child(3) {
+  transform: translateX(600px) rotate(10deg);
+  box-shadow: 2px 2px 10px var(--sub-color-pu);
+  transition: transform 0.8s 0.6s ease, opacity 0.8s 0.6s ease;
+}
+
+
+/* con3 스킬부분 */
+#con3 article.skill {
+  width: 100%;
+  padding-bottom: 100px;
+  background: url(../img/rainbow_bg.png) center/cover no-repeat;
 }
 
 #con3 article.skill h2 {
@@ -286,32 +451,13 @@ main h2 {
   font-weight: 600;
 }
 
-#con3 .skill_bg {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: -1;
-  background: url(../img/rainbow_bg.png) center/cover no-repeat;
-  /* background-image: url(../img/bg3.png); */
-  opacity: 0.15;
-}
-
-#con3 #canvas2 {
-  top: 300px;
-}
-
-#con3 #canvas3 {
-  top: calc(100vh + 300px);
-  height: 160vh;
-}
-
 #con3 .skill_all {
   width: 100%;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: #fff;
+  color: var(--main-color-bk);
   padding-top: 80px;
 }
 
@@ -346,7 +492,7 @@ main h2 {
   display: inline-block;
   animation: slashMotion 0.8s infinite ease alternate;
   transform-origin: center;
-  color: #fff;
+  color: var(--main-color-bk);
   /* position: absolute;
   top: -10px;
   left: 35px; */
@@ -414,7 +560,7 @@ main h2 {
 }
 
 #con3 ul li .program .right h3 {
-  font-family: "Playfair Display", serif;
+  font-weight: 500;
   font-size: 40px;
 }
 
@@ -423,102 +569,14 @@ main h2 {
   color: #666;
 }
 
-/* 장점 부분 */
-#con3 article.have {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 250px 0 100px 0;
-}
-
-#con3 article.have h3 {
-  font-size: 70px;
-  font-weight: 900;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 40px;
-}
-
-/* 가운데 텍스트 */
-#con3 article.have .list h2 {
-  padding-top: 150px;
-  font-size: 10rem;
-  opacity: 0.2;
-  line-height: 1.6;
-  z-index: 0;
-  position: relative;
-}
-
-/* 카드 스택 */
-#con3 article.have .list ul.card_stack {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 15%);
-  width: 300px;
-  height: 300px;
-  z-index: 1;
-}
-
-.card_stack li {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  font-size: 20px;
-  font-weight: bold;
-  transform: translateX(0) rotate(0);
-  /* background: #ccc; */
-}
-
-.card_stack li:nth-child(1) {
-  transform: rotate(-12deg);
-}
-
-.card_stack li:nth-child(2) {
-  transform: rotate(-3deg);
-}
-
-.card_stack li:nth-child(3) {
-  transform: rotate(10deg);
-}
-
-
-/* active 클래스가 붙었을 때 펼쳐짐 */
-.card_stack.active li:nth-child(1) {
-  transform: translateX(-600px) rotate(-12deg);
-  background: #ccc;
-  transition: transform 0.8s 0.2s ease, opacity 0.8s 0.2s ease;
-}
-
-.card_stack.active li:nth-child(2) {
-  transform: translateX(0) rotate(-3deg);
-  background: #ddd;
-  transition: transform 0.8s 0.4s ease, opacity 0.8s 0.4s ease;
-}
-
-.card_stack.active li:nth-child(3) {
-  transform: translateX(600px) rotate(10deg);
-  background: #eee;
-  transition: transform 0.8s 0.6s ease, opacity 0.8s 0.6s ease;
-}
-
 
 
 #con4 {
   width: 100%;
-  height: 100vh;
+  padding-top: 200px;
+  height: calc(100vh + 200px);
   overflow: hidden;
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 
 #con4 .waveline {
@@ -756,5 +814,122 @@ main h2 {
 #con5 {
   width: 100%;
   height: 100vh;
-  background: url(../img/rainbow_bg.png);
+  background: url(../img/rainbow_bg.png) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#con5 .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← 가로 가운데 정렬 */
+  text-align: center;
+}
+
+#con5 .text h2 {
+  opacity: 0.4;
+  color: var(--main-color-wh);
+  font-size: 15rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+#con5 .text h3 {
+  font-size: 70px;
+  font-weight: 600;
+  position: absolute;
+  top: 45%;
+  color: var(--main-color-wh);
+  text-shadow:
+    0 0 5px red,
+    0 0 10px orange,
+    0 0 15px yellow,
+    0 0 20px green,
+    0 0 25px blue,
+    0 0 30px indigo,
+    0 0 35px violet;
+}
+
+#con5 .text p {
+  position: absolute;
+  top: 60%;
+  font-size: 22px;
+  line-height: 2rem;
+}
+
+#con5 .heart {
+  display: flex;
+  align-items: center;
+}
+
+#con5 .heart li {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: float 2s infinite ease-in-out;
+}
+
+.left-heart li {
+  background-image: url('../img/heart_left.png');
+  position: absolute;
+  left: 26%;
+}
+
+.right-heart li {
+  background-image: url('../img/heart_right.png');
+  position: absolute;
+  right: 26%;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+
+#con5 .sns {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+#con5 .sns ul {
+  display: flex;
+  gap: 20px;
+}
+
+#con5 .sns ul li:hover {
+  color: var(--main-color-bk);
+}
+
+#con5 .sns ul li a img {
+  width: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sns li a:hover img {
+  /* transform: scale(1.1); */
+  filter:
+  drop-shadow(0 0 1px rgba(255, 0, 0, 0.3))    /* red */
+  drop-shadow(0 0 2px rgba(255, 165, 0, 0.3))  /* orange */
+  drop-shadow(0 0 3px rgba(255, 255, 0, 0.3))  /* yellow */
+  drop-shadow(0 0 4px rgba(0, 128, 0, 0.3))    /* green */
+  drop-shadow(0 0 5px rgba(0, 0, 255, 0.3))    /* blue */
+  drop-shadow(0 0 6px rgba(75, 0, 130, 0.3))   /* indigo */
+  drop-shadow(0 0 7px rgba(238, 130, 238, 0.3)); /* violet */
 }

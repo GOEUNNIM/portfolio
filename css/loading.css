@@ -5,7 +5,8 @@
   overflow: hidden;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -20,43 +21,69 @@ body, html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
-  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: rainbowFade 3s ease-in-out forwards;
+  z-index: 9999;
+
+  /* 처음엔 아래만 보이게 */
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 50%);
+  mask-image: linear-gradient(to top, black 0%, transparent 50%);
+  -webkit-mask-size: 100% 200%;
+  mask-size: 100% 200%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: fadeUpMask 3s ease-in-out forwards;
 }
 
 #rainbow-overlay img {
-  width: 70%;
+  max-width: 100%;
   height: auto;
-  object-fit: contain;
-  pointer-events: none;
-  user-select: none;
+  display: block;
 }
 
-/* 걷히는 애니메이션 */
-@keyframes rainbowFade {
+/* 해모양 */
+.sun {
+  width: 60px;
+  height: 60px;
+  animation: spin 4s linear infinite;
+}
+
+
+@keyframes fadeUpMask {
   0% {
-    opacity: 1;
+    -webkit-mask-position: 0% 0%;
+    mask-position: 0% 0%;
   }
   100% {
-    opacity: 0;
+    -webkit-mask-position: 0% 100%;
+    mask-position: 0% 100%;
+  }
+}
+
+/* 해모양 도는 거 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
 /* 본문은 처음에 안 보이게 */
 #main-content {
-  opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(70px);
   transition: opacity 1s ease, transform 1s ease;
   text-align: center;
-  padding: 100px;
+  color: var(--main-color-bk);
+  font-size: 30px;
+  line-height: 3rem;
+  z-index: 100;
 }
 
 /* 무지개 걷히고 본문 등장 */
-body.loaded #main-content {
+/* body.loaded #main-content {
   opacity: 1;
   transform: translateY(0);
-}
+} */

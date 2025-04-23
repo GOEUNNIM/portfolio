@@ -272,8 +272,15 @@ $(function () {
   });
 
 
+  /* 마우스 커서 */
+  document.addEventListener('mousemove', (e) => {
+    let mouseX = e.pageX + 10; // document의 x좌표값
+    let mouseY = e.pageY + 10; // document의 y좌표값
 
-
+    let cursor = document.querySelector('.cursor');
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+  });
 
 
 
@@ -290,13 +297,11 @@ $(function () {
       if (top < vh * 0.8 && bottom > vh * 0.2) {
         if (!target.classList.contains('active')) {
           target.classList.add('active');
-          console.log('✅ 카드 active 클래스 추가됨');
         }
       } else {
         // 다시 나갔다가 들어올 수 있게끔 active 제거
         if (target.classList.contains('active')) {
           target.classList.remove('active');
-          console.log('🌀 카드 active 클래스 제거됨');
         }
       }
     });
