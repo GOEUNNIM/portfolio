@@ -7,16 +7,17 @@ font-family: "Poppins", sans-serif;
 */
 
 :root {
-  --main-color-or: #F94C10;
   --main-color-wh: #fff;
   --main-color-bk: #000;
-  --sub-color-re: #ff0000;
-  --sub-color-or: #ffa500;
-  --sub-color-ye: #FFB200;
-  --sub-color-gr: #008000;
-  --sub-color-bl: #0000ff;
-  --sub-color-pu: #4b0052;
+  --main-color-re: #E94235;
+  --main-color-or: #FF6D00;
+  --main-color-ye: #FABB05;
+  --main-color-gr: #34A853;
+  --main-color-bl: #4285F4;
+  --main-color-pu: #9B51E0;
   --sub-color-gray: #888;
+  --sub-color-blue: #14479D;
+  --sub-color-purple: #7F33C7;
   --main-font-pre: 'Pretendard-Regular';
   --main-font-pop: "Poppins", sans-serif;
 }
@@ -28,46 +29,39 @@ font-family: "Poppins", sans-serif;
 
 body {
   font-family: 'Pretendard';
-  /* overflow: hidden; */
   border: none;
-  /* 혹시 border가 있거나 */
   box-shadow: none;
-  /* 하단 그림자가 있지 않은지 확인 */
 }
 
 .inner {
-  width: 1360px;
+  width: 1620px;
   margin: 0 auto;
 }
 
 /* 크롬, 엣지, 사파리용 */
+/* 스크롤바 기본 스타일 (1번만 정의) */
 ::-webkit-scrollbar {
   width: 10px;
-  /* 세로 스크롤 너비 */
   height: 8px;
-  /* 가로 스크롤 높이 */
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
-  /* 트랙 배경 */
 }
-
 ::-webkit-scrollbar-thumb {
-  /* background: linear-gradient(135deg, #000000, #2c2c2c, #f0f0f0); */
   background-color: var(--main-color-or);
-  /* 스크롤 핸들 색상 */
   border-radius: 8px;
   border: 2px solid transparent;
-  /* 여백처럼 보이게 */
   background-clip: content-box;
-  transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--sub-color-gray);
-  /* 호버 시 색상 변경 */
   opacity: 0.5;
+}
+
+#con2,
+.horizontal-scroll {
+  overflow-y: hidden !important;
+  /* ✅ 이거 중요 */
 }
 
 .cursor {
@@ -83,7 +77,8 @@ header {
   width: 100%;
   height: 80px;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
+  background: url(../img/gnb_bg.jpg) center/cover no-repeat;
 }
 
 header ul.gnb {
@@ -94,40 +89,100 @@ header ul.gnb {
   line-height: 78px;
   font-size: 22px;
   font-family: var(--main-font-pop);
-
 }
 
-header ul.gnb li {
-  transition: .4s;
+.gnb li {
+  position: relative;
 }
 
-header ul.gnb li:nth-child(1):hover {
-  color: var(--sub-color-re);
-  font-weight: 500;
+/* 공통 세로선 스타일 - 초기 상태 */
+.gnb li::before,
+.gnb li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 0;
+  /* 시작은 0 */
+  transform: translateX(-50%);
+  background-color: transparent;
+  opacity: 0;
+  transition: height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 1;
 }
 
-header ul.gnb li:nth-child(2):hover {
+/* 위쪽 선 위치 */
+.gnb li::before {
+  top: 0;
+}
+
+/* 아래쪽 선 위치 */
+.gnb li::after {
+  bottom: -2px;
+}
+
+/* 활성화될 때 효과 적용 */
+.gnb li.active::before,
+.gnb li.active::after {
+  height: 20px;
+  opacity: 1;
+}
+
+/* 색상별 지정 */
+.gnb li.home.active::before,
+.gnb li.home.active::after {
+  background-color: var(--main-color-re);
+}
+
+.gnb li.union.active::before,
+.gnb li.union.active::after {
+  background-color: var(--main-color-or);
+}
+
+.gnb li.personal.active::before,
+.gnb li.personal.active::after {
+  background-color: var(--main-color-ye);
+}
+
+.gnb li.narrative.active::before,
+.gnb li.narrative.active::after {
+  background-color: var(--main-color-gr);
+}
+
+.gnb li.identity.active::before,
+.gnb li.identity.active::after {
+  background-color: var(--main-color-bl);
+}
+
+.gnb li.message.active::before,
+.gnb li.message.active::after {
+  background-color: var(--main-color-pu);
+}
+
+header ul.gnb li span {
+  font-weight: 700;
+}
+
+header ul.gnb li span.e {
+  color: var(--main-color-re);
+}
+
+header ul.gnb li span.u {
   color: var(--main-color-or);
-  font-weight: 500;
 }
 
-header ul.gnb li:nth-child(3):hover {
-  color: var(--sub-color-ye);
-  font-weight: 500;
+header ul.gnb li span.n {
+  color: var(--main-color-ye);
 }
 
-header ul.gnb li:nth-child(4):hover {
-  color: var(--sub-color-gr);
-  font-weight: 500;
+header ul.gnb li span.n2 {
+  color: var(--main-color-gr);
 }
 
-header ul.gnb li:nth-child(5):hover {
-  color: var(--sub-color-bl);
-  font-weight: 500;
+header ul.gnb li span.i {
+  color: var(--main-color-bl);
 }
 
-header ul.gnb li:nth-child(6):hover {
-  color: var(--sub-color-pu);
-  font-weight: 500;
+header ul.gnb li span.m {
+  color: var(--main-color-pu);
 }
-

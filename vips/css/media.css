@@ -1,0 +1,527 @@
+@charset "utf-8";
+@media screen and (max-width:1024px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .inner {
+        width: 100%;
+    }
+
+    h2 {
+        height: 60px;
+        line-height: 60px;
+        font-size: 50px;
+    }
+
+    header {
+        padding: 0 20px;
+        height: auto;
+    }
+
+    header h1 {
+        width: 150px;
+        height: auto;
+    }
+
+    header h1 a img {
+        width: 90px;
+    }
+
+    header nav {
+        width: 65%;
+    }
+
+    /* GNB 메뉴 크기 줄이기 */
+    header nav ul.gnb>li>a {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    header nav ul.gnb>li>ul.sub>li {
+        font-size: 16px;
+        height: auto;
+        line-height: 2.5;
+        padding: 0 10px;
+    }
+
+    header nav ul.gnb>li>ul.sub>li>a {
+        white-space: nowrap;
+        /* 줄바꿈 방지 */
+        overflow: hidden;
+        /* 넘치는 텍스트 숨김 */
+        text-overflow: ellipsis;
+    }
+
+    /* 사용자 메뉴 안 보이게 */
+    header .user {
+        display: none;
+    }
+
+    /* 아이콘 보이게 */
+    header .h_icon {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 10px;
+        padding-right: 50px;
+    }
+
+    header .h_icon .tablet {
+        display: flex;
+        gap: 20px;
+    }
+
+    header .h_icon .tablet button {
+        display: block;
+        font-size: 18px;
+        transition: .6s;
+    }
+
+    header .h_icon .tablet button:hover {
+        /* text-shadow: 2px 2px 14px #fff; */
+        color: var(--color-red);
+    }
+
+    /* 모바일 햄버거 메뉴는 필요 시만 표시 */
+    header .h_icon .mobile {
+        display: none;
+        /* 원하면 block으로 */
+    }
+
+    .main_txt strong {
+        font-size: 80px;
+        line-height: 160px;
+    }
+
+    .main_txt span {
+        font-size: 50px;
+    }
+
+    .main_txt p {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .steak {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+
+    .steak .st_con1 {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 50px;
+        /* box-shadow: 1px 1px 5px #e2e2e2; */
+    }
+
+    .st_con1 .st_con1_le {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0 auto;
+        background-image: url(../img/img_t_bg.jpg);
+        border-radius: 10px;
+    }
+
+    .st_con1 .st_con1_le h3 {
+        font-size: 35px;
+        padding-bottom: 25px;
+    }
+
+    .st_con1 .st_con1_le p {
+        font-size: 22px;
+    }
+
+    .st_con1 .right {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        /* 좌우 여백 줘서 슬라이드 preview 효과 */
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .st_list {
+        width: 400px !important;
+        height: 440px;
+        /* 고정 px 권장 */
+        flex-shrink: 0;
+        margin: 20px 10px 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: inset 0 0 5px #e2e2e2;
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    .st_thumbnail {
+        width: 90%;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item_img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .st_thumbnail.on .item_img {
+        transform: scale(1);
+    }
+
+    .st_name {
+        font-size: 20px;
+        padding-bottom: 0;
+    }
+
+    .st_subname {
+        font-size: 18px;
+    }
+
+    .st_p {
+        font-size: 17px;
+        line-height: 24px;
+        padding-top: 10px;
+    }
+
+    .st_con1 .steak_page {
+        display: none;
+    }
+
+    /* 스테이크 컨테이너2 */
+    .st_con2 {
+        flex-direction: column;
+        padding-top: 0;
+        position: relative;
+    }
+
+    .st_con2 .st_con2_le {
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+
+    .st_con2 .st_con2_le h3 {
+        font-size: 35px;
+    }
+
+    .st_con2 .st_con2_le strong {
+        font-size: 25px;
+        line-height: 3.5rem;
+    }
+
+    .st_con2 .st_con2_le span {
+        font-size: 20px;
+    }
+
+    .st_con2 .st_con2_le p {
+        font-size: 22px;
+    }
+
+    .st_con2 .st_con2_le_go {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 40px;
+        border-radius: 7px;
+        margin-top: 30px;
+        transition: .6s;
+    }
+
+    .st_con2 .st_con2_le_go:hover {
+        background: var(--color-red);
+        color: #fff;
+        border: 1px solid transparent;
+    }
+
+    .st_con2 .st_con2_ri {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .st_con2 .st_con2_ri .img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .st_con2 .st_con2_ri .icon {
+        display: none;
+    }
+
+    /* 샐러드바 */
+    .saladbar {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+
+    .saladbar::after {
+        background: url(../img/bg02.png);
+    }
+
+    .saladbar .title p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-top: 30px;
+    }
+
+    .saladbar .saladbar_icon {
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .saladbar .saladbar_icon img {
+        width: 90px;
+    }
+
+    .saladbar .saladbar_icon ul li {
+        width: 30%;
+    }
+
+    .saladbar .saladbar_icon .txt {
+        font-size: 16px;
+    }
+
+    .saladbar .saladbar_icon .txt strong {
+        font-size: 20px;
+    }
+
+    .saladbar .saladbar_icon .txt b {
+        font-size: 20px;
+    }
+
+    /* 샐러드바 메뉴 */
+    .saladbar_menu {
+        width: 100%;
+    }
+
+    .saladbar_menu ul.tab_menu {
+        height: 70px;
+        line-height: 68px;
+        margin-top: 60px;
+    }
+
+    .saladbar_menu ul.menu_list {
+        height: 100%;
+    }
+
+    .saladbar_menu ul.tab_menu li {
+        font-size: 24px;
+    }
+
+    .saladbar_menu ul.menu_list {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .saladbar_menu ul.menu_list>li>ul>li {
+        width: 23%;
+    }
+
+    .saladbar_menu ul.menu_list>li>ul>li img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .saladbar_menu ul.menu_list>li>ul>li strong {
+        width: 100%;
+        padding: 16px;
+        font-size: 20px;
+        box-shadow: 2px 2px 0 var(--color-red);
+    }
+
+    /* 이벤트 */
+    .event {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/bg_event.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+
+    .event_con {
+        gap: 40px;
+    }
+
+    .event_con.swiper-wrapper {
+        justify-content: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        transform: none !important;
+        width: 100% !important;
+    }
+
+    .event_list.swiper-slide {
+        flex: 0 0 auto !important;
+        margin: 10px;
+    }
+
+    .bg4,
+    .bg5,
+    .bg6 {
+        display: none !important;
+    }
+
+
+    /* 푸터 */
+    footer {
+        height: auto;
+    }
+
+    .logo_slider {
+        gap: 80px;
+    }
+
+    .logo_slider li {
+        height: 50px;
+    }
+
+    .logo_slider img {
+        height: 22px;
+    }
+
+    .footer_list .logo {
+        display: none;
+    }
+
+    .list_top {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .list_top ul {
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .list_top ul li {
+        border-right: 0;
+        line-height: 0.5;
+    }
+
+    .list_bottom {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .list_bottom ul {
+        justify-content: flex-start;
+        /* 좌측 정렬 */
+        gap: 10px 20px;
+        margin-top: 50px;
+    }
+
+    .list_bottom ul li {
+        padding: 0 40px 20px 0;
+        /* 여백 조정 */
+    }
+
+    .list_bottom>p {
+        font-size: 13px;
+        padding: 20px 0;
+    }
+
+}
+
+
+@media screen and (max-width: 390px) {
+    h2 {
+        height: 45px;
+        list-style: 45px;
+        font-size: 40px;
+    }
+
+    br {
+        display: none;
+    }
+
+    /* 샐러드바 */
+    .saladbar {
+        width: 80%;
+        margin-top: 150px;
+    }
+
+    .saladbar .title p {
+        font-size: 17px;
+    }
+
+    .saladbar .saladbar_icon img {
+        width: 80px;
+        height: 80px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .saladbar .saladbar_icon ul {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        text-align: start;
+        gap: 30px;
+    }
+
+    .saladbar .saladbar_icon .txt {
+        padding-top: 0;
+        font-size: 15px;
+    }
+
+    .saladbar .saladbar_icon ul li {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .saladbar .saladbar_icon .txt strong,
+    .saladbar .saladbar_icon .txt b {
+        font-size: 18px;
+    }
+
+    /* 샐러드바 메뉴 리스트부분 */
+    .saladbar_menu ul.tab_menu {
+        height: 60px;
+        line-height: 58px;
+    }
+
+    .saladbar_menu ul.tab_menu li {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .saladbar_menu ul.tab_menu li::after {
+        content: '▾';
+        height: 0;
+        left: 40%;
+        cursor: pointer; 
+    }
+
+    .saladbar_menu ul.tab_menu li:nth-child(2),
+    .saladbar_menu ul.tab_menu li:nth-child(3),
+    .saladbar_menu ul.tab_menu li:nth-child(4) {
+        display: none;
+    }
+}

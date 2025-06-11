@@ -1,0 +1,196 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@100..900&family=WindSong:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css");
+@import url("font.css");
+
+/* 
+    font-family: 'SUIT-Regular';
+    font-family: "Noto Sans KR", sans-serif;
+    font-family: "DM Serif Display", serif;
+    font-family: "WindSong", cursive;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-red: #d10000;
+  --color-gray: #888;
+  --color-white: #fff;
+  --Noto-Sans: "Noto Sans KR", sans-serif;
+  --DM-Serif: "DM Serif Display", serif;
+  --Winsong: "WindSong", cursive;
+  --Suit: "SUIT-Regular";
+}
+
+.inner {
+  width: 1600px;
+  margin: 0 auto;
+  /* display: flex; */
+}
+
+h2 {
+  width: 100%;
+  height: 100px;
+  font-size: 80px;
+  font-family: var(--DM-Serif);
+  text-align: center;
+  line-height: 100px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: black;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+header .inner {
+  display: flex;
+}
+
+header h1 {
+  width: 200px;
+  height: 80px;
+}
+
+header h1 a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 a img {
+  width: 120px;
+  height: auto;
+}
+
+header .h_icon {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .h_icon button {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+header .h_icon button.on {
+  display: none;
+}
+
+header nav {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+}
+
+header nav ul.gnb {
+  display: flex;
+  width: 1100px;
+  height: 100%;
+  text-align: center;
+  line-height: 80px;
+}
+
+header nav ul.gnb > li {
+  flex: 1;
+  position: relative;
+}
+
+header nav ul.gnb > li::after {
+  content: "";
+  background: #d10000;
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.6s;
+  transform: scale(0);
+}
+
+header nav ul.gnb > li:hover::after {
+  transform: scale(1);
+}
+
+header nav ul.gnb>li>a {
+  width: 100%;
+  height: 80px;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.5s;
+  font-family: "DM Serif Display", serif;
+  font-size: 22px;
+}
+
+header nav ul.gnb>li>ul.sub {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  display: none;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header nav ul.gnb>li:hover>ul.sub {
+  display: block;
+}
+
+header nav ul.gnb>li>ul.sub>li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.6s;
+}
+
+header nav ul.gnb>li>ul.sub>li:hover>a {
+  font-weight: 500;
+  text-shadow: 2px 2px 14px #fff;
+}
+
+header nav ul.gnb>li>ul.sub>li>a {
+  display: block;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+
+header .user {
+  width: 300px;
+  height: 100%;
+  color: #fff;
+  transition: .6s;
+}
+
+header .user ul {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 80px;
+  
+}
+
+header .user ul li li {
+  transition: .6s;
+}
+
+header .user ul li:hover a {
+  text-shadow: 2px 2px 14px #fff;
+}

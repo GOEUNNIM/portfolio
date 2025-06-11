@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIPS</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/354952547b.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/main_style.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel=”stylesheet” href=”./css/jquery.simplyscroll.css” type=”text/css” />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="inner">
+        <div class="h_icon">
+          <div class="tablet">
+            <button type="button" class="loginbtn on"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            <button type="button" class="userbtn"><i class="fa-regular fa-user"></i></button>
+            <button type="button" class="serbtn"><i class="fa-regular fa-comment"></i></button>
+          </div><!-- //.tablet -->
+          <div class="mobile">
+            <button type="button" class="hambtn"><i class="fa-solid fa-bars"></i></button>
+          </div><!-- //mobile -->
+        </div><!-- //.h_icon -->
+        <h1><a href="#"><img src="img/logo.png" alt="VIPS"></a></h1>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">BRAND</a>
+              <ul class="sub">
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">매장안내</a></li>
+              </ul><!-- //.sub -->
+            </li>
+            <li>
+              <a href="#">MENU</a>
+              <ul class="sub">
+                <li><a href="#">스테이크</a></li>
+                <li><a href="#">가격안내</a></li>
+                <li><a href="#">샐러드바 메뉴</a></li>
+                <li><a href="#">시즌 메뉴</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">메뉴 정보</a></li>
+              </ul><!-- //.sub -->
+            </li>
+            <li>
+              <a href="#">MEMBERSHIP</a>
+              <ul class="sub">
+                <li><a href="#">CJ ONE</a></li>
+                <li><a href="#">등급별 안내</a></li>
+              </ul><!-- //.sub -->
+            </li>
+            <li>
+              <a href="#">EVENT</a>
+              <ul class="sub">
+                <li><a href="#">진행중인 이벤트</a></li>
+                <li><a href="#">제휴/할인 카드</a></li>
+                <li><a href="#">상품권</a></li>
+              </ul><!-- //.sub -->
+            </li>
+          </ul><!-- //.gnb -->
+        </nav>
+        <div class="user">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div><!-- //.user -->
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="main_visual swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide slide1">
+            <video src="img/mainvisual.mp4" loop muted autoplay></video>
+          </li>
+          <li class="swiper-slide slide2">
+            <a href="#">
+              <div class="main_txt txt1">
+                <strong>Signature Combo</strong><br>
+                <span>스테이크도 다양하게!</span>
+                <p>함께 나누기 좋은 시그니처 콤보</p>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide slide3">
+            <a href="#">
+              <div class="main_txt txt2">
+                <strong>Birthday Party</strong><br>
+                <span>생일 파티&돌잔치도 빕스</span>
+                <p>특별한 날, 특별한 빕스에서 함께해요</p>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide slide4">
+            <a href="#">
+              <div class="main_txt txt3">
+                <strong>Spring Season</strong><br>
+                <span>봄 시즌 한정메뉴</span>
+                <p>봄에만 만나볼 수 있는 스페셜한 메뉴!</p>
+              </div>
+            </a>
+          </li>
+          <li class="swiper-slide slide5">
+            <a href="#">
+              <div class="main_txt txt4">
+                <strong>Special Steak</strong><br>
+                <span>고품격 티본 스테이크</span>
+                <p>비교할 수 없는 품질의 스테이크를 즐겨보세요</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <!--     <ul class="pager">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+        <!-- //.pager -->
+      </section>
+      <section class="steak">
+        <h2>STEAK</h2>
+        <article class="st_con1">
+          <div class="st_con1_le" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+            <h3>PREMIUM</h3>
+            <p>
+              시즈널 샐러드바와 프리미엄 스테이크로<br>더욱 풍성한 빕스 테이블
+              완성!
+            </p>
+            <a href="#" class="more"> 바로가기 </a>
+          </div><!-- //.st_con1_le -->
+          <div class="right swiper-container swiper-initialized swiper-horizontal swiper-pointer-events">
+            <ul class="st_con1_ri swiper-wrapper">
+              <li class="st_list swiper-slide">
+                <div class="st_thumbnail"><img src="img/steak01.png" class="item_img" alt=""></div>
+                <div class="st_name">허브 갈릭 램&채끝 스테이크</div><br>
+                <div class="st_subname">Herb Garlic Lamb&Sirloin Steak</div>
+                <div class="st_p">[양고기, 쇠고기 : 호주산]<br>채끝 210g</div>
+              </li>
+              <li class="st_list swiper-slide">
+                <div class="st_thumbnail"><img src="img/steak02.png" class="item_img" alt=""></div>
+                <div class="st_name">그릴드 랍스터&채끝 스테이크</div><br>
+                <div class="st_subname">Grilled Lobster&Sirloin Strak</div>
+                <div class="st_p">[양고기, 쇠고기 : 호주산]<br>채끝 180g</div>
+              </li>
+              <li class="st_list swiper-slide">
+                <div class="st_thumbnail"><img src="img/steak03.png" class="item_img" alt=""></div>
+                <div class="st_name">안심 스테이크</div><br>
+                <div class="st_subname">Tenderloin Steak</div>
+                <div class="st_p">[양고기, 쇠고기 : 미국산]<br>안심 200g</div>
+              </li>
+              <li class="st_list swiper-slide">
+                <div class="st_thumbnail"><img src="img/steak04.png" class="item_img" alt=""></div>
+                <div class="st_name">채끝 스테이크</div><br>
+                <div class="st_subname">Sirloin Steak</div>
+                <div class="st_p">[쇠고기 : 호주산]<br>채끝 220g</div>
+              </li>
+              <li class="st_list swiper-slide">
+                <div class="st_thumbnail"><img src="img/steak03.png" class="item_img" alt=""></div>
+                <div class="st_name">안심 스테이크</div><br>
+                <div class="st_subname">Sirloin Steak</div>
+                <div class="st_p">[쇠고기 : 미국산]<br>안심 200g</div>
+              </li>
+            </ul>
+          </div><!-- //.right -->
+          <div class="steak_page">
+            <i class="fa-solid fa-chevron-left prev"></i>
+            <i class="fa-solid fa-chevron-right next"></i>
+          </div>
+        </article>
+        <!-- //.st_con1 -->
+        <article class="st_con2">
+          <div class="st_con2_le">
+            <h3>ENJOY THE VIPS STEAK</h3>
+            <strong>스테이크를 더~욱 맛있게 즐기는 법!</strong><br>
+            <span>For Special Moments</span>
+            <p>
+              특별한 오늘을 더 특별하게!<br>
+              스테이크 마스터 셰프가 선보이는<br>
+              프리미엄 스테이크를 만나보세요.
+            </p>
+            <div class="st_con2_le_go">
+              <a href="#">바로가기</a>
+            </div>
+            <!-- //.st_con2_le_go -->
+          </div>
+          <!-- //.st_con2_le -->
+          <div class="st_con2_ri" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+            <img src="img/steak_right.png" alt="" class="img" />
+            <img src="img/steak_icon.png" alt="" class="icon" />
+          </div>
+          <!-- //.st_con2_ri -->
+        </article>
+        <!-- //.st_con2 -->
+      </section>
+      <section class="saladbar">
+        <div class="title">
+          <h2>SALAD BAR</h2>
+          <p>
+            VIPS의 샐러드 바는 지속적인 변화와 메뉴개발을 통하여 고객님께 보다
+            나은 즐거움과 감동의 가치를 전달하기 위해 노력하고 있습니다.
+          </p>
+        </div>
+        <!-- //.title -->
+        <div class="saladbar_icon inner">
+          <ul>
+            <li data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+              <img src="img/sbicon01.png" alt="" />
+              <div class="txt">
+                <strong><b>신선한 식재료</b> 사용</strong>
+                <p>
+                  VIPS는 신선하고 청결하고 신선한 식재료를<br>
+                  사용하여 신선한 음식을 고객님께 제공합니다.
+                </p>
+              </div>
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+              <img src="img/sbicon02.png" alt="" />
+              <div class="txt">
+                <strong>지속적인 <b>메뉴개발</b></strong>
+                <p>
+                  VIPS는 지속적인 메뉴개발을 통해<br>고객님께 다양한 메뉴를
+                  제공하도록 노력합니다.
+                </p>
+              </div>
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+              <img src="img/sbicon03.png" alt="" />
+              <div class="txt">
+                <strong>친절한 <b>고객 만족 서비스</b></strong>
+                <p>
+                  VIPS는 고객님께 보다 나은<br>즐거움과 감동의 가치를 전달하기
+                  위해 노력합니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- //.saladbar_icon -->
+        <div class="saladbar_menu inner">
+          <ul class="tab_menu">
+            <li class="on" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">Soup</li>
+            <li data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">Mixed Salad</li>
+            <li data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">Pizza&Pasta</li>
+            <li data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">Hot</li>
+          </ul>
+          <!-- //.tab_menu -->
+          <ul class="menu_list inner">
+            <li class="on">
+              <ul>
+                <li>
+                  <img src="img/menu01.jpg" alt="메뉴" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
+                  <strong>굴라쉬스프</strong>
+                  <p>
+                    쇠고기와 양파, 토마토 등을<br>
+                    넣어 끓인 헝가리식 대표적인 수프
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu02.jpg" alt="메뉴" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" />
+                  <strong>브로콜리스프</strong>
+                  <p>
+                    향긋하고 진한 브로콜리에 부드러운 크림과<br>
+                    우유를 더한 스프
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu03.jpg" alt="메뉴" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000" />
+                  <strong>양송이스프</strong>
+                  <p>
+                    양송이 버섯의 진한 맛과 향을 담고<br>
+                    부드러운 크림과 우유를 더한 스프
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu04.jpg" alt="메뉴" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000" />
+                  <strong>콘크림스프</strong>
+                  <p>
+                    톡톡 씹히는 달콤한 옥수수에<br>
+                    부드러운 크림으로 고소함을 더한 스프
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <!-- 수프 -->
+            <li>
+              <ul>
+                <li>
+                  <img src="img/menu05.jpg" alt="메뉴" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
+                  <strong>누들샐러드</strong>
+                  <p>
+                    매콤한 타이누들에 그릴드 케이준 쉬림프를<br>
+                    듬뿍, 화끈한 맛으로 스트레스 타파!
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu06.jpg" alt="메뉴" />
+                  <strong>그릭샐러드</strong>
+                  <p>
+                    부드러운 부라타 치즈와 발사믹 드레싱을 더한<br>
+                    맛과 영양을 꾹꾹 눌러 담은 샐러드
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu07.jpg" alt="메뉴" />
+                  <strong>바질샐러드</strong>
+                  <p>
+                    향긋한 바질을 듬뿍 담아<br>
+                    지친 몸과 마음을 상큼하게!
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu08.jpg" alt="메뉴" />
+                  <strong>치킨샐러드</strong>
+                  <p>
+                    고소한 치즈에 구운 닭가슴살,<br>
+                    발사믹 드레싱을 곁들인 샐러드
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <!-- 샐러드 -->
+            <li class="">
+              <ul>
+                <li>
+                  <img src="img/menu09.jpg" alt="메뉴" />
+                  <strong>슈림프리조또</strong>
+                  <p>
+                    탱글한 새우와 고소한 치즈의 풍미까지!<br>
+                    아이부터 어른까지 모두 즐기기 좋은 메뉴
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu10.jpg" alt="메뉴" />
+                  <strong>미트볼파스타</strong>
+                  <p>
+                    진하게 끓여서 풍미 가득한 토마토 소스와<br>
+                    바로 만든 듯한 생면의 식감을 즐길 수 있는 파스타
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu11.jpg" alt="메뉴" />
+                  <strong>마르게리따피자</strong>
+                  <p>
+                    토마토와 바질이 아낌없이 듬뿍!<br>
+                    진한 풍미의 모짜렐라 치즈까지~
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu12.jpg" alt="메뉴" />
+                  <strong>알리오올리오</strong>
+                  <p>
+                    통통한 새우, 올리브, 마늘을 듬쭉 얹어<br>
+                    풍미를 더한 오일 베이스의 파스타
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <!-- 피자파스타 -->
+            <li class="">
+              <ul>
+                <li>
+                  <img src="img/menu13-1.jpg" alt="메뉴" />
+                  <strong>갈릭떡볶이</strong>
+                  <p>
+                    매콤한 고추장과 갈릭의 환상적인 만남<br>
+                    코리아 대표 소울푸드
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu14.jpg" alt="메뉴" />
+                  <strong>바베큐 폭립</strong>
+                  <p>
+                    부드럽고 촉촉한 살코기의 식감은 물론,<br>
+                    후추를 더해 질리지 않는 소스
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu15.jpg" alt="메뉴" />
+                  <strong>골든갈릭라이스</strong>
+                  <p>
+                    고소한 마늘의 풍미 담은 갈릭라이스에<br>
+                    바삭하게 구운 마늘칩을 더해 풍미를 한층 UP
+                  </p>
+                </li>
+                <li>
+                  <img src="img/menu16.jpg" alt="메뉴" />
+                  <strong>후라이드 치킨</strong>
+                  <p>
+                    닭다리살로 만들어 겉은 바삭하고<br>
+                    속은 촉촉한 육즙 가득 오리지널 치킨
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <!-- 핫 -->
+          </ul>
+        </div>
+        <!-- //.saladbar_menu -->
+      </section>
+      <section class="event inner">
+        <a href="#"><h2>EVNET</h2></a>
+        <div class="event_all swiper">
+          <article class="event_con swiper-wrapper">
+            <div class="event_list swiper-slide bg1">
+              <div class="preview">슈퍼 스테이크 세트 20%</div>
+              <div class="detail">
+                <h3>슈퍼 스테이크 세트 20%</h3>
+                <span>SUPER! STEAK SET</span>
+                <p>샐러드바 & 스테이크 세트<b>20% OFF</b><br>
+                  이벤트 기간 : 2025.03.20 ~ 2025.04.21</p>
+              </div>
+            </div><!-- //.event_list -->
+            <div class="event_list swiper-slide bg2">
+              <div class="preview">에너지 업! 빕스 슈퍼 테이블</div>
+              <div class="detail">
+                <h3>에너지 업! 빕스 슈퍼 테이블</h3>
+                <span>SUPER TABLE</span>
+                <p>봄을 맞이하여 특별히 선보이는 그 메뉴!<br>
+                  이벤트 기간 : 2025.03.20 ~ 2025.04.21</p>
+              </div>
+            </div><!-- //.event_list -->
+            <div class="event_list swiper-slide bg3">
+              <div class="preview">LG U+ 유플투쁠</div>
+              <div class="detail">
+                <h3>LG U+ 유플투쁠</h3>
+                <span>STROWBERRY WONDERLAND</span>
+                <p>VIP 고객 최대 <b>45% 할인!</b><br>
+                  쿠폰 사용 기간 : 2025.03.13 ~ 2025.04.31</p>
+              </div>
+            </div><!-- //.event_list -->
+            <div class="event_list swiper-slide bg4">
+              <div class="preview">빕스 X 에버랜드 매월 달라지는 혜택</div>
+              <div class="detail">
+                <h3>빕스 X 에버랜드 매월 달라지는 혜택</h3>
+                <span>VIPS Monthly Special Coupon</span>
+                <p>빕스 샐러드바 만원 할인 쿠폰<br>
+                  쿠폰 사용 기간 : 2025.03.01 ~ 2025.03.31</p>
+              </div>
+            </div><!-- //.event_list -->
+            <div class="event_list swiper-slide bg5">
+              <div class="preview">군인을 위한 특별 혜택</div>
+              <div class="detail">
+                <h3>군인을 위한 특별 혜택</h3>
+                <span>빕스가 대한민국 군인 여러분을 응원합니다</span>
+                <p>최대 25% 할인과 10% 할인 이벤트<br>
+                  이벤트 기간 : 2024.10.01 ~ 2026.09.30</p>
+              </div>
+            </div><!-- //.event_list -->
+            <div class="event_list swiper-slide bg6">
+              <div class="preview">소방관을 위한 특별 혜택</div>
+              <div class="detail">
+                <h3>소방관을 위한 특별 혜택</h3>
+                <span>빕스가 대한민국 소방관 여러분을 응원합니다.</span>
+                <p>최대 25% 할인과 10% 할인 이벤트<br>
+                  이벤트 기간 : 2023.06.01 ~ 2025.05.31</p>
+              </div>
+            </div><!-- //.event_list -->
+          </article>
+        </div><!-- //.event_all -->
+      </section><!-- //event -->
+    </main>
+    <footer>
+      <div class="family">
+        <ul class="logo_slider">
+          <li><a href="#"><img src="img/logo_cj.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_tous.png" alt="뚜레쥬르"></a></li>
+          <li><a href="#"><img src="img/logo_place.png" alt="플레이스"></a></li>
+          <li><a href="#"><img src="img/logo_j.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_grill.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_seoul.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_cj.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_tous.png" alt="뚜레쥬르"></a></li>
+          <li><a href="#"><img src="img/logo_place.png" alt="플레이스"></a></li>
+          <li><a href="#"><img src="img/logo_j.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_grill.png" alt="CJ푸드빌"></a></li>
+          <li><a href="#"><img src="img/logo_seoul.png" alt="CJ푸드빌"></a></li>
+        </ul>
+      </div><!-- //.family -->
+      <div class="footer_content">
+        <div class="footer_list inner">
+          <div class="logo">
+            <a href="#"><img src="img/logo.png" alt="빕스"></a>
+          </div><!-- //.logo -->
+          <div class="foo_right">
+            <div class="list_top">
+              <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">위치기반서비스 이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">영상정보처리기기 운영관리방침</a></li>
+                <li><a href="#">이메일 무단수집거부</a></li>
+                <li><a href="#">법접고지</a></li>
+                <li><a href="#">윤리신고센터</a></li>
+              </ul>
+            </div>
+            <div class="list_bottom">
+              <ul>
+                <li>(우)04555 서울시 중구 마른내로 34, 11층 CJ푸드빌(주)</li>
+                <li>대표이사 : 김땡땡</li>
+                <li class="cl">고객센터 : 1500-1010</li>
+                <li>팩스 : 02)1400-1201</li>
+                <li>사업자등록번호 : 312-81-012000</li>
+                <li class="cl">개인정보보호책임자 : 김무무</li>
+                <li>대표 이메일 : cool1004@cj.net</li>
+              </ul>
+              <p class="cl">Copyright. ⓒ2017 Cj Foodville ALL RIGHT RESERVED.</p>
+            </div>
+          </div>
+        </div><!-- //.footer_list -->
+      </div><!-- //.footer_content -->
+    </footer>
+  </div><!-- //.wrap -->
+</body>
+
+</html>
