@@ -60,7 +60,7 @@
       <!-- 풍선 -->
       <section id="con1">
         <canvas id="world"></canvas>
-        <div id="customCursor"></div>
+        <canvas id="cursorCanvas"></canvas>
         <div id="cursorText">풍선을 움직여보세요!</div>
       </section>
       <!-- //.con1 -->
@@ -98,19 +98,29 @@
         </div><!-- //.txtAniBox -->
 
         <!-- Swiper 컨테이너 -->
-         <div class="slide">
+        <div class="slide">
           <div class="project swiper">
             <div class="project_list swiper-wrapper">
               <!-- Slide 1 (중앙에서 시작됨) -->
               <div class="list swiper-slide">
                 <img src="./img/mockup2.png" alt="이미지" />
-                <div class="list_caption">
-                  <h3>팀프로젝트 (반응형 웹)</h3>
-                  <span>밥잇슈1</span>
-                  <p>2025.04.18 ~ 05.21</p>
+                <div class="project_content">
+                  <div class="list_caption">
+                    <h3>반응형 웹 디자인 협업</h3>
+                    <span>밥잇슈</span>
+                    <p>2025.04.18 ~ 05.21</p>
+                  </div>
+                  <div class="link">
+                    <a class="landing" href="https://www.figma.com/deck/WsXMeSfnZkJdwW8CWNcCrW/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-539&viewport=-162%2C-194%2C1&t=SGr1KJjvOCWNKY2S-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">
+                      <p>랜딩페이지</p>
+                    </a>
+                    <a class="web" href="https://freeleearte.github.io/bobissue/" target="_blank">
+                      <p>웹</p>
+                    </a>
+                  </div>
                 </div>
               </div>
-          
+
               <!-- Slide 2 -->
               <div class="list swiper-slide">
                 <img src="./img/mockup1.png" alt="이미지" />
@@ -172,14 +182,16 @@
           <!-- tit -->
           <div class="personal_project_all">
             <div class="elements">
-              <div class="elem el1" data-aos="zoom-in-up" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="-300">
+              <div class="elem el1" data-aos="zoom-in-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                data-aos-offset="-300">
                 <a href="./company_iloom/index.html" target="_blank">
                   <img src="img/personal1.jpg" alt="프로젝트01" />
                   <h3>ilroom</h3>
                   <p>브랜드 일룸 리뉴얼</p>
                 </a>
               </div><!-- //.elem -->
-              <div class="elem el2" data-aos="zoom-in-up" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="-400">
+              <div class="elem el2" data-aos="zoom-in-up" data-aos-easing="ease-in-back" data-aos-delay="400"
+                data-aos-offset="-400">
                 <a href="./cosmetic/index.html" target="_blank">
                   <img src="img/personal3.jpg" alt="프로젝트02" />
                   <h3>cosmetic</h3>
@@ -371,7 +383,7 @@
                     </div>
                   </div><!-- //.program -->
                 </li>
-                <li class="skill_06" data-aos="fade-up" data-aos-duration="200" data-aos-delay="100">
+                <li class="skill_06" data-aos="fade-up" data-aos-duration="200" data-aos-delay="90">
                   <div class="num">06 <span class="slash">/</span></div>
                   <div class="program">
                     <div class="left">
@@ -468,7 +480,7 @@
       <section id="con5">
         <div class="inner">
           <h2 data-aos="flip-up">NARRATIVE</h2>
-          <span data-aos="zoom-in" data-aos-delay="200">모든 색이 스스로의 자리를 찾을 때, 비로소 무지개가 완성되듯
+          <span data-aos="zoom-in" data-aos-delay="50">모든 색이 스스로의 자리를 찾을 때, 비로소 무지개가 완성되듯
             다양한 감각을 존중하며, 그 안의 균형과 흐름을 정성스럽게
             다듬습니다.<br>
             다채로움 속에서도 하나의 결을 만들어내는 것, 그게 제
@@ -588,7 +600,7 @@
       <section id="con6">
         <div class="inner">
           <div class="content">
-            <img src="img/rainbow_2.png" alt="무지개"  data-aos="fade-right" />
+            <img src="img/rainbow_2.png" alt="무지개" data-aos="fade-right" />
             <h2>THANK<br>YOU</h2>
             <div class="text">
               <p data-aos="flip-down" data-aos-duration="8000">

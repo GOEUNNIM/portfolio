@@ -43,19 +43,29 @@ html {
   transform: translate(-50%, -50%);
 }
 
+#cursorCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  /* #customCursor(9999) 아래, Matter.js(기본) 위 */
+}
+
 #cursorText {
   position: fixed;
   top: 0;
   left: 0;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 8px;
-  border-radius: 6px;
-  pointer-events: none;
+  transform: translate(12px, -12px);
+  font-size: 16px;
+  color: #ff66cc;
+  font-weight: bold;
   z-index: 9999;
+  pointer-events: none;
+  white-space: nowrap;
   display: none;
-  transform: translate(-50%, -50%);
 }
+
 
 main h2 {
   font-size: clamp(3rem, 10vw, 10rem);
@@ -160,6 +170,51 @@ main h2 {
   display: block;
 }
 
+.project_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.project_content .link {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+.project_content .link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.project_content .link .landing,
+.project_content .link .web {
+  width: 150px;
+  height: 50px;
+  background: var(--sub-color-gray);
+  opacity: 0.8;
+  color: var(--main-color-wh);
+  font-size: 20px;
+  font-weight: 200;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  transition: .6s;
+  /* transform: scale(0.8); */
+}
+
+.project_content .link .landing:hover,
+.project_content .link .web:hover {
+  opacity: 1;
+  background: var(--main-color-or);
+  box-shadow: 2px 2px 10px var(--main-color-or);
+}
+
+
 /* 기본적으로 숨김 */
 .list_caption {
   display: none;
@@ -170,14 +225,13 @@ main h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 50px;
   text-align: start;
 }
 
 .list_caption h3 {
   font-size: 30px;
   font-weight: 600;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .list_caption span {
@@ -529,7 +583,7 @@ main h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 3;
 }
@@ -555,7 +609,6 @@ main h2 {
   width: 100%;
   /*   height: 100vh; */
   padding-top: 400px;
-  background: #ccc;
 }
 
 #con5 h2 {
