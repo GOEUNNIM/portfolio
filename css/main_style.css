@@ -163,6 +163,7 @@ main h2 {
   z-index: 2;
 }
 
+
 /* 이미지 */
 .list img {
   border-radius: 20px;
@@ -174,7 +175,17 @@ main h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 0 50px;
+  opacity: 0;
+  height: 0;
+}
+
+.swiper-slide-active .project_content {
+  opacity: 1;
+  visibility: visible;
   padding: 50px;
+  /* 원래대로 복구 */
+  height: 100%;
 }
 
 .project_content .link {
@@ -772,6 +783,15 @@ main h2 {
   font-weight: 100;
   color: var(--main-color-wh);
   line-height: 4rem;
+  z-index: 1;
+  overflow: hidden;
+  /* white-space: pre-line; */
+}
+
+#con6 .text p {
+  margin: 0;
+  padding: 0;
+  will-change: contents;
 }
 
 #con6 .text span {
@@ -809,3 +829,4 @@ main h2 {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
+

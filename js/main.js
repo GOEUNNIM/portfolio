@@ -188,12 +188,15 @@ $(function () {
     /* con5 카드 */
     gsap.registerPlugin(ScrollTrigger);
 
+    // 초기 상태 설정
+    /* gsap.set(['.card1', '.card2', '.card3'], { rotationY: 0 }); */
+
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '#con5',
-            start: 'top 70%',
+            start: 'top 60%',
             end: 'top 10%',
-            scrub: 1.5,
+            scrub: 3,
             /* markers: true */  // 디버깅용 마커
         }
     });
@@ -202,4 +205,60 @@ $(function () {
     tl.to('.card1', { rotationY: 180, ease: "power2.inOut", duration: 1 }, 0)
         .to('.card2', { rotationY: 180, ease: "power2.inOut", duration: 1 }, 0.5)
         .to('.card3', { rotationY: 180, ease: "power2.inOut", duration: 1 }, 1);
+
+
+
+    /* con6 타이핑 */
+    const textHTML = `
+  비가 온 뒤 <span>무지개</span>가 떠오르듯<br>
+  끊임없는 고민과 배움을 통해 빛나는 <span>다채로운 세상</span>의<br>
+  사용자 경험과 인터페이스를 그려나가겠습니다.
+`;
+
+    const target = document.getElementById("typeText");
+    let i = 0;
+    let isTyping = false;
+
+    function typing() {
+        if (isTyping) return;
+        isTyping = true;
+
+        const strippedText = textHTML.replace(/<[^>]*>/g, ''); // span, br 태그 제외한 순수 텍스트
+        const tagMatches = [...textHTML.matchAll(/<[^>]*>/g)];
+
+        let output = '';
+        let plainIndex = 0;
+        let tagIndex = 0;
+        let currentTag = tagMatches[tagIndex];
+
+        function typeChar() {
+            // 태그가 들어갈 위치면 태그 삽입
+            if (currentTag && currentTag.index === output.length) {
+                output += currentTag[0];
+                tagIndex++;
+                currentTag = tagMatches[tagIndex];
+            } else if (plainIndex < strippedText.length) {
+                output += strippedText[plainIndex];
+                plainIndex++;
+            }
+
+            target.innerHTML = output;
+
+            if (plainIndex < strippedText.length || currentTag) {
+                setTimeout(typeChar, 50); // 속도 조절
+            }
+        }
+
+        typeChar();
+    }
+
+    // ScrollTrigger로 시작 시점 조절
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+        trigger: "#con6",
+        start: "top 70%",
+        once: true,
+        onEnter: () => typing()
+    });
 });
