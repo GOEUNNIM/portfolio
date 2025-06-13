@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* 노트북, 작은 데스크탑 */
+@media (max-width: 1280px) {
+  
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  
+}
+
+/* 모바일 (일반 스마트폰) */
+@media (max-width: 768px) {
+  
+}
+
+/* 모바일 (작은 화면) */
+@media (max-width: 390px) {
+  
+}
