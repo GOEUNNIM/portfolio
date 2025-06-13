@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="해외 및 국내 여행 패키지, 항공권, 호텔 예약을 한 곳에서! 맞춤 여행 상품과 실시간 할인 정보를 제공합니다." />
+  <meta name="keywords" content="여행, 패키지 여행, 자유 여행, 항공권 예약, 호텔 예약, 여행사" />
+  <meta name="author" content="Go Eun Nim" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>레고 리뉴얼 사이트</title>
+  <script src="https://kit.fontawesome.com/354952547b.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/main_style.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="inner">
+        <div class="top">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div><!-- //.top -->
+        <div class="bottom">
+          <h1>
+            <a href="#"><img src="img/logo.png" alt="레고" /></a>
+          </h1>
+          <nav class="gnb">
+            <ul>
+              <li><a href="#">국내여행</a></li>
+              <li><a href="#">해외여행</a></li>
+              <li><a href="#">항공</a></li>
+              <li><a href="#">호텔</a></li>
+              <li><a href="#">전체메뉴</a></li>
+            </ul>
+          </nav><!-- //gnb -->
+          <div class="search">
+            <input type="text" placeholder="검색어를 입력하세요." />
+            <button type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- //.search -->
+        </div>
+        <!-- //.bottom -->
+      </div>
+      <!-- //.inner -->
+    </header>
+    <div class="main_visual swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide slide1">
+          <div class="img_box">
+            <img src="img/main_banner01.png" alt="레고" />
+          </div>
+          <div class="main_txt inner">
+            <p>기간한정 스페셜할인가 자유여행부터 풀패키지까지</p>
+            <h2>이번엔 어디가지? 고민이라면<br>싱가포르 추천해요</h2>
+          </div>
+          <!-- //.main_txt -->
+        </li>
+        <li class="swiper-slide slide2">
+          <div class="img_box">
+            <img src="img/main_banner02.png" alt="레고" />
+          </div>
+          <div class="main_txt inner">
+            <p>여행지 100% 살리기</p>
+            <h2>어디에서도 볼 수 없는<br>돌고래와의 특별한 만남</h2>
+          </div>
+          <!-- //.main_txt -->
+        </li>
+        <li class="swiper-slide slide3">
+          <div class="img_box">
+            <img src="img/main_banner03.png" alt="레고" />
+          </div>
+          <div class="main_txt inner">
+            <p>유럽을 대표하는 인기 여행지!</p>
+            <h2>
+              낭만을 여행하는 빠른 방법<br>
+              야경의 도시 파리
+            </h2>
+          </div>
+          <!-- //.main_txt -->
+        </li>
+        <li class="swiper-slide slide4">
+          <div class="img_box">
+            <img src="img/main_banner04.png" alt="레고" />
+          </div>
+          <div class="main_txt inner">
+            <p>2025 벚꽃 여행 떠나자</p>
+            <h2>설렘을 맞이할 준비,<br>일본 벚꽃여행</h2>
+          </div>
+          <!-- //.main_txt -->
+        </li>
+        <li class="swiper-slide slide5">
+          <a href="#">
+            <div class="img_box">
+              <img src="img/main_banner05.png" alt="레고" />
+            </div>
+            <div class="main_txt inner">
+              <p>미리미리 준비하고 떠나는 힐링 여행</p>
+              <h2>가장 가깝게 즐기는 힐링의 섬<br>세부로 떠나요</h2>
+            </div>
+            <!-- //.main_txt -->
+          </a>
+        </li>
+      </ul>
+      <div class="inner">
+        <div class="button_p">
+          <ul>
+            <li class="left">
+              <i class="fa-solid fa-circle-chevron-left"></i>
+            </li>
+            <li class="right">
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+          <!-- <p><span>1</span>/5</p> -->
+        </div>
+        <!-- //.button_p -->
+      </div>
+    </div>
+    <!-- //.main_visual -->
+    <main>
+      <section class="happy">
+        <div class="inner">
+          <ul>
+            <li class="animate__animated animate__lightSpeedInLeft"><img src="img/img_happy01.png" alt="이미지" /></li>
+            <li class="z">
+              <img src="img/img_happy02.png" alt="이미지" />
+            </li>
+            <li><img src="img/dotted.png" alt="이미지" /></li>
+            <li class="animate__animated animate__lightSpeedInRight" id="scroll_A"><img src="img/img_happy03.png"
+                alt="이미지" /></li>
+          </ul>
+          <div class="txt">
+            <h2>설연휴의 행복<br>동남아시아 휴양지!</h2>
+            <p>
+              하고 싶은게 너무 많아 계획한 자유여행<br>내맘대로 항공+호텔로
+              간편 예약하고<br>현지투어플러스로 똠얌꿍 쿠킹 클래스 체험<br>
+              누구든프로여행러로 레벨업 가능!!
+            </p>
+            <p class="go"><a href="#">바로가기</a></p>
+          </div>
+          <!-- //.txt -->
+        </div>
+        <!-- //.inner -->
+      </section>
+      <section class="first">
+        <h2>2025년 첫 여행! 어디로 떠날까?</h2>
+        <div class="first_wrap swiper">
+          <ul class="first_slide swiper-wrapper">
+            <li class="first_card swiper-slide">
+              <a href="#">
+                <img src="img/img_first01.png" alt="이미지" />
+                <h3>역사와 예술의 도시<br>스페인 & 포르투갈</h3>
+                <p>
+                  합리적인 가격! 직항으로 편안하게!<br>다채로운 6대 특식
+                  미식여행
+                </p>
+              </a>
+            </li>
+            <li class="first_card swiper-slide">
+              <a href="#">
+                <img src="img/img_first02.png" alt="이미지" />
+                <h3>친구/가족/연인과 함께<br>4명부터 무조건 출발!</h3>
+                <p>
+                  우리끼리 단독여행 4인 이상 예약 시<br>출발 확정
+                </p>
+              </a>
+            </li>
+            <li class="first_card swiper-slide">
+              <a href="#">
+                <img src="img/img_first03.png" alt="이미지" />
+                <h3>사계절 언제나<br>북해도 여행의 모든 것!</h3>
+                <p>
+                  소복이 쌓이는 낭만,<br>영화의 한 장면처럼
+                </p>
+              </a>
+            </li>
+            <li class="first_card swiper-slide">
+              <a href="#">
+                <img src="img/img_first04.png" alt="이미지" />
+                <h3>북유럽 여행을 더욱<br>특별하게!</h3>
+                <p>
+                  합리적인 가격! 직항으로 편안하게!<br>다채로운 6대 특식
+                  미식여행
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- //.first_wrap -->
+      </section>
+      <!-- //.first -->
+      <div class="inner">
+        <section class="md_pick">
+          <div class="left">
+            <img src="img/img_mdpick.png" alt="" />
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="txt">
+              <h3><strong>MD'S</strong> Pick</h3>
+              <p>
+                # 알찬 휴가여행<br>
+                # 겨울에 따뜻한 나라로<br>
+                # 가족과 행복한 여행<br>
+                # 유럽여행 어렵지 않아요
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- //.md_pick -->
+        <section class="event">
+          <h2>쏠쏠한 혜택, 핫한 이벤트</h2>
+          <div class="ev_banner_all inner">
+            <ul>
+              <li>
+                <a href="#"><img src="img/event01.png" alt="이미지" />
+                  <div class="ev_txt">
+                    <p>유심부터 할인쿠폰까지!</p>
+                    <span>한 눈에 모아보는 알뜰 혜택존</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/event02.png" alt="이미지" />
+                  <div class="ev_txt">
+                    <p>멤버스 회원가입시 쿠폰 증정!</p>
+                    <span>회원 혜택 쿠폰</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"><img src="img/event03.png" alt="이미지" />
+                  <div class="ev_txt">
+                    <p>설레는 여행, 또 다른 즐거움</p>
+                    <span>카드 무이자 안내</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"><img src="img/event04.png" alt="이미지" />
+                  <div class="ev_txt">
+                    <p>롯데 | 신라 | 신세계 | 현대백화점</p>
+                    <span>4대 면세 쇼핑 혜택</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div><!-- //.ev_banner_all -->
+        </section><!-- //.event -->
+        <section class="korea">
+          <h2>겨울이 깃든 우리나라 여행</h2>
+          <div class="korea_all swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="img/img_korea01.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[백령도]</span>
+                  <p>#3식제공 #서해의비경</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea02.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[제주도]</span>
+                  <p>#겨울한정 #감귤체험</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea03.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[울릉도]</span>
+                  <p>#포항크루즈 #육로코스</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea04.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[독도]</span>
+                  <p>#힐링여행 #섬여행</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea05.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[정동진]</span>
+                  <p>#일몰여행 #겨울바다</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea01.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[백령도]</span>
+                  <p>#3식제공 #서해의비경</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea02.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[제주도]</span>
+                  <p>#겨울한정 #감귤체험</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea03.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[울릉도]</span>
+                  <p>#포항크루즈 #육로코스</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea04.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[독도]</span>
+                  <p>#힐링여행 #섬여행</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+              <li class="swiper-slide">
+                <img src="img/img_korea05.png" alt="이미지" />
+                <div class="korea_txt">
+                  <span>[정동진]</span>
+                  <p>#일몰여행 #겨울바다</p>
+                </div>
+                <!-- //.korea_txt -->
+              </li>
+            </ul>
+          </div>
+          <!-- //.korea_all -->
+        </section>
+      </div>
+      <section class="best">
+        <div class="inner">
+          <div class="best_txt">
+            <h2>최근 한달간 평점 높은<br>BEST 상품</h2>
+            <p>여행하기 좋은 날 고민없이 떠나요</p>
+          </div><!-- //.best_txt -->
+          <div class="con1">
+            <div class="con1_img">
+              <ul class="con1_img_list">
+                <li>
+                  <a href="#">
+                    <img src="img/best_frame.png" alt="프레임">
+                    <span>일본</span>
+                    <div class="black_bg"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/best_frame.png" alt="프레임">
+                    <span>발리</span>
+                    <div class="black_bg"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/best_frame.png" alt="프레임">
+                    <span>베트남</span>
+                    <div class="black_bg"></div>
+                  </a>
+                </li>
+              </ul><!-- //.con1_img_list -->
+            </div><!-- //.con1_img -->
+          </div><!-- //.con1 -->
+        </div><!-- //.inner -->
+      </section>
+      <section class="soldout">
+        <h2>망설이면 솔드아웃!<br>항공특가</h2>
+        <p class="go"><a href="#">바로가기</a></p>
+      </section>
+      <section class="travel">
+        <div class="inner">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="travel_box">
+                  <img src="img/soldout01.png" alt="이미지" />
+                  <span>국내편</span>
+                  <p>
+                    떠나자! 친구, 가족 연인과 함께<br>낭만 가득한 국내 여행
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="travel_box">
+                  <img src="img/soldout02.png" alt="이미지" />
+                  <span>해외편</span>
+                  <p>
+                    새해 맞이 특가 할인!<br>2025년 자유로운 여행 떠나보자
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_top">
+        <ul class="inner">
+          <li>
+            <p>고객센터</p>
+            <p>02-1111-1234</p>
+          </li>
+        </ul>
+      </div><!-- //.footer_top -->
+      <div class="inner">
+        <div class="footer_mid">
+          <div class="mid_txt">
+            <ul>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">여행약관</a></li>
+              <li><a href="#">여행보험</a></li>
+              <li><a href="#">서비스이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">찾아오시는길</a></li>
+            </ul>
+          </div><!-- //.mid_txt -->
+          <div class="mid_sns">
+            <ul>
+              <li><a href="#"><img src="img/icon_kakao.png" alt="카카오톡"></a></li>
+              <li><a href="#"><img src="img/icon_insta.png" alt="인스타"></a></li>
+              <li><a href="#"><img src="img/icon_facebook.png" alt="페이스북"></a></li>
+              <li><a href="#"><img src="img/icon_blog.png" alt="블로그"></a></li>
+            </ul>
+          </div><!-- //.mid_sns -->
+        </div><!-- //.footer_mid -->
+        <div class="footer_bottom">
+          <ul>
+            <li><span>(주)레고</span></li>
+            <li><span>대표이사 :</span> 고은님</li>
+            <li><span>주 소 :</span> 서울 서초구 서초대로77길 41, 대동2빌딩 9층</li>
+            <li><span>사업자등록번호 :</span> 101-12-562260</li>
+            <li><span>대표전화 :</span> 02-567-7890</li>
+            <li class="gray">Copyrightⓒ Go Eun Nim. All right reseved.</li>
+          </ul>
+        </div><!-- //.footer_bottom -->
+      </div><!-- //.inner -->
+    </footer>
+  </div><!-- wrap -->
+</body>
+
+</html>
