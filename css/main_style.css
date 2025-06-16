@@ -50,6 +50,7 @@ html {
   pointer-events: none;
   z-index: 9998;
   /* #customCursor(9999) 아래, Matter.js(기본) 위 */
+  color: #FF9EAA;
 }
 
 #cursorText {
@@ -58,7 +59,7 @@ html {
   left: 0;
   transform: translate(12px, -12px);
   font-size: 16px;
-  color: #ff66cc;
+  color: #FF9EAA;
   font-weight: bold;
   z-index: 9999;
   pointer-events: none;
@@ -414,7 +415,7 @@ main h2 {
   z-index: 100;
 }
 
-#con4 .narrative ul li:nth-child(1) {
+/* #con4 .narrative ul li:nth-child(1) {
   width: 200px;
   height: 200px;
   background: url(../img/narr01.png) no-repeat center/contain;
@@ -422,7 +423,76 @@ main h2 {
   left: 26%;
   bottom: 34%;
   transform: rotate(38deg);
+} */
+
+/* #con4 .narrative ul li:nth-child(1).svg-dot {
+  position: absolute;
+  left: 24%;
+  bottom: 34%;
+  width: 250px;
+  height: 250px;
 }
+
+#con4 .ellipse .fill-circle {
+  transform: scale(0);
+  transform-origin: center;
+  animation: fillGrow 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fillGrow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+/* li 1번 그려지면서 채워지는 원형 */
+#con4 .narrative ul li:nth-child(1).svg-circle {
+  position: absolute;
+  left: 24%;
+  top: 52%;
+}
+
+.circle-outline {
+  stroke-dasharray: 314; /* 2 * PI * r = 2 * 3.14 * 50 */
+  stroke-dashoffset: 314;
+  animation: drawStroke 4s ease-in-out infinite alternate;
+  /* 4초 동안 천천히 그려지고, 다시 4초 동안 사라지고 반복 */
+}
+
+.circle-fill {
+  transform: scale(0);
+  transform-origin: center;
+  opacity: 1;
+  animation: fillIn 6s ease-in-out infinite alternate;
+  animation-delay: 1.5s; /* outline 다 그려지고 나서 시작 */
+}
+
+@keyframes drawStroke {
+  from {
+    stroke-dashoffset: 314;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 #con4 .narrative ul li:nth-child(2) {
   width: 100px;
@@ -779,6 +849,8 @@ main h2 {
 }
 
 #con6 .text {
+  width: 100%;
+  height: 500px;
   font-size: 50px;
   font-weight: 100;
   color: var(--main-color-wh);
@@ -792,6 +864,15 @@ main h2 {
   margin: 0;
   padding: 0;
   will-change: contents;
+}
+
+#typeText {
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+  will-change: auto !important;
+  position: relative;
+  top: 0 !important;
 }
 
 #con6 .text span {
@@ -821,8 +902,11 @@ main h2 {
 }
 
 #con6 .sns ul li a img {
-  width: 40px;
+  width: 50px;
+  border: none;
   transition: transform 0.3s ease, filter 0.3s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 #con6 .sns ul li a:hover img {
@@ -830,3 +914,11 @@ main h2 {
   filter: brightness(1.2);
 }
 
+#con6 .sns ul li a {
+  outline: none;
+}
+
+#con6 .sns ul li a:focus,
+#con6 .sns ul li a:active {
+  outline: none;
+}

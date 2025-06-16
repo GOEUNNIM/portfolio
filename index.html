@@ -260,7 +260,36 @@
         <div class="narrative inner">
           <h2 data-aos="flip-up" data-aos-duration="80">NARRATIVE</h2>
           <ul class="ellipse">
-            <li></li>
+            <li class="svg-circle">
+              <svg width="250" height="250" viewBox="0 0 120 120">
+                <!-- 외곽선 -->
+                <circle class="circle-outline" cx="60" cy="60" r="50" stroke="url(#strokeGrad)" stroke-width="2"
+                  fill="none" />
+                <!-- 채움 -->
+                <circle class="circle-fill" cx="60" cy="60" r="50" fill="url(#fillGrad)" />
+
+                <defs>
+                  <!-- 외곽선용 선명한 그라디언트 -->
+                  <linearGradient id="strokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#A4DD00" />
+                    <stop offset="100%" stop-color="#A0C878" />
+                  </linearGradient>
+
+                  <!-- 안쪽 채움용 볼륨+빛 -->
+                  <radialGradient id="fillGrad" cx="40%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5" />
+                    <stop offset="30%" stop-color="#DDEB9D" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#E1EEBC" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </li>
+            <!-- <li class="svg-dot">
+              <svg width="250" height="250" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="50" stroke="var(--main-color-gr)" stroke-width="1" fill="none" />
+                <circle class="fill-circle" cx="60" cy="60" r="50" fill="var(--main-color-gr)" />
+              </svg>
+            </li> -->
             <li></li>
             <li></li>
             <li></li>
@@ -283,7 +312,7 @@
               </span>
             </div>
           </div><!-- //.me -->
-        </div><!-- //.about -->
+        </div><!-- //.narrative -->
         <article class="skill">
           <div class="inner">
             <h2>SKILL</h2>

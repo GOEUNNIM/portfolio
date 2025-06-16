@@ -5,8 +5,29 @@ $(function () {
     document.querySelectorAll(".gnb li").forEach((li) => {
         li.addEventListener("click", function (e) {
             e.preventDefault();
+
+            // active 클래스 토글
             document.querySelectorAll(".gnb li").forEach((el) => el.classList.remove("active"));
             this.classList.add("active");
+
+            // a 태그의 href 값 가져오기
+            const targetId = this.querySelector("a").getAttribute("href");
+            const targetEl = document.querySelector(targetId);
+
+            if (targetEl) {
+                // header 높이 계산 (고정된 헤더라면)
+                const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+
+                // GSAP 스크롤 애니메이션
+                gsap.to(window, {
+                    duration: 1.2, // 더 부드럽게 (기존보다 약간 길게)
+                    scrollTo: {
+                        y: targetEl,
+                        offsetY: headerHeight
+                    },
+                    ease: "power2.out" // 부드러운 ease 효과
+                });
+            }
         });
     });
 
@@ -48,7 +69,7 @@ $(function () {
     cursorCanvas.width = window.innerWidth;
     cursorCanvas.height = window.innerHeight;
     let trail = [];
-    const maxTrail = 20;
+    const maxTrail = 10;
 
     // 마우스 움직임 감지
     window.addEventListener('mousemove', (e) => {
@@ -71,28 +92,36 @@ $(function () {
 
         if (inCon1) {
             ctx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height);
-            ctx.beginPath();
+            /* ctx.beginPath(); */
 
             for (let i = 0; i < trail.length - 1; i++) {
                 const p1 = trail[i];
                 const p2 = trail[i + 1];
                 /* const alpha = i / trail.length; */
                 const alpha = (i / trail.length) * 0.8; // 전체적으로 연해짐
-                ctx.strokeStyle = `rgba(255, 100, 200, ${alpha})`;
-                ctx.lineWidth = 2;
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-            }
+                const lineW = (i / trail.length) * 3 + 0.5;
+                /* ctx.lineWidth = (i / trail.length) * 3 + 0.5; */
+                ctx.strokeStyle = `rgba(255, 158, 170, ${alpha})`;
+                ctx.lineWidth = lineW;
 
-            ctx.stroke();
+                ctx.beginPath();
+
+                // 💡 부드러운 곡선 처리를 위한 control point
+                const cx = (p1.x + p2.x) / 2;
+                const cy = (p1.y + p2.y) / 2;
+
+                ctx.moveTo(p1.x, p1.y);
+                ctx.quadraticCurveTo(cx, cy, p2.x, p2.y);
+
+                ctx.stroke();
+            }
+            /* ctx.stroke(); */
         } else {
             ctx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height);
             trail = []; // 화면 벗어나면 trail도 초기화
         }
-
         requestAnimationFrame(drawTrail);
     }
-
     drawTrail();
 
     // 창 크기 변경 대응
@@ -194,7 +223,7 @@ $(function () {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '#con5',
-            start: 'top 60%',
+            start: 'top 50%',
             end: 'top 10%',
             scrub: 3,
             /* markers: true */  // 디버깅용 마커
