@@ -468,7 +468,7 @@ main h2 {
 .circle-fill {
   transform: scale(0);
   transform-origin: center;
-  opacity: 1;
+  opacity: 0;
   animation: fillIn 6s ease-in-out infinite alternate;
   animation-delay: 1.5s; /* outline 다 그려지고 나서 시작 */
 }
@@ -485,7 +485,7 @@ main h2 {
 @keyframes fillIn {
   from {
     transform: scale(0);
-    opacity: 1;
+    opacity: 0;
   }
   to {
     transform: scale(1);
