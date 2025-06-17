@@ -459,7 +459,8 @@ main h2 {
 }
 
 .circle-outline {
-  stroke-dasharray: 314; /* 2 * PI * r = 2 * 3.14 * 50 */
+  stroke-dasharray: 314;
+  /* 2 * PI * r = 2 * 3.14 * 50 */
   stroke-dashoffset: 314;
   animation: drawStroke 4s ease-in-out infinite alternate;
   /* 4초 동안 천천히 그려지고, 다시 4초 동안 사라지고 반복 */
@@ -470,13 +471,15 @@ main h2 {
   transform-origin: center;
   opacity: 0;
   animation: fillIn 6s ease-in-out infinite alternate;
-  animation-delay: 1.5s; /* outline 다 그려지고 나서 시작 */
+  animation-delay: 1.5s;
+  /* outline 다 그려지고 나서 시작 */
 }
 
 @keyframes drawStroke {
   from {
     stroke-dashoffset: 314;
   }
+
   to {
     stroke-dashoffset: 0;
   }
@@ -487,6 +490,7 @@ main h2 {
     transform: scale(0);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -503,22 +507,73 @@ main h2 {
   animation: bounceUp 2s ease-in-out infinite;
 }
 
-#con4 .narrative ul li:nth-child(3) {
+/* #con4 .narrative ul li:nth-child(3) {
   width: 350px;
   width: 350px;
   background: url(../img/narr03.png) no-repeat center/contain;
   right: 6%;
   bottom: -10%;
   z-index: -99;
+} */
+
+#con4 .narrative ul li:nth-child(3).svg-circle2 {
+  position: absolute;
+  left: 72%;
+  bottom: -50%;
+  z-index: -99;
+  opacity: 0.4;
 }
+
+.circle-outline2 {
+  stroke-dasharray: 314;
+  /* 2 * PI * r = 2 * 3.14 * 50 */
+  stroke-dashoffset: 314;
+  animation: drawStroke 4s ease-in-out infinite alternate;
+  /* 4초 동안 천천히 그려지고, 다시 4초 동안 사라지고 반복 */
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.circle-fill {
+  transform: scale(0);
+  transform-origin: center;
+  opacity: 0;
+  animation: fillIn 6s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+  /* outline 다 그려지고 나서 시작 */
+}
+
+@keyframes drawStroke {
+  from {
+    stroke-dashoffset: 314;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 
 #con4 .narrative ul li:nth-child(4) {
   width: 170px;
   height: 180px;
-  background: url(../img/narr04.png) no-repeat center/contain;
+  background: url(../img/narr03.png) no-repeat center/contain;
   right: 22%;
   bottom: 30%;
-  animation: slashMotion 0.8s infinite ease alternate;
+  animation: bounceUp 0.8s infinite ease alternate;
 }
 
 @keyframes bounceUp {
