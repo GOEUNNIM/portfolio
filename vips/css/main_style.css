@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+  overflow-x: hidden;
+}
+
 .main_visual {
   width: 100%;
   height: 100vh;
@@ -181,7 +185,7 @@
 }
 
 .st_con1 .st_con1_le .more::after {
-  content: '→';
+  content: "→";
   margin-left: 8px;
   display: inline-block;
 }
@@ -274,7 +278,6 @@
   left: 1040px;
 }
 
-
 /* 스테이크 컨테이너2 */
 .st_con2 {
   width: 100%;
@@ -363,7 +366,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/bg.png') center/cover;
+  background: url("../img/bg.png") center/cover;
   opacity: 0.08;
   /* 배경 투명도 조절 */
   z-index: -1;
@@ -432,7 +435,7 @@
 }
 
 .saladbar_menu ul.tab_menu li::after {
-  content: '';
+  content: "";
   background: #d10000;
   width: 100%;
   height: 4px;
@@ -440,7 +443,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  transition: .6s;
+  transition: 0.6s;
   transform: scale(0);
 }
 
@@ -457,7 +460,6 @@
   background: #d10000;
 }
 
-
 .saladbar_menu ul.menu_list {
   width: 1600px;
   height: 540px;
@@ -466,7 +468,7 @@
   margin-bottom: 300px;
 }
 
-.saladbar_menu ul.menu_list>li {
+.saladbar_menu ul.menu_list > li {
   width: 100%;
   height: 100%;
   /*  position: absolute;
@@ -475,17 +477,17 @@
   display: none;
 }
 
-.saladbar_menu ul.menu_list>li.on {
+.saladbar_menu ul.menu_list > li.on {
   display: block;
 }
 
-.saladbar_menu ul.menu_list>li>ul {
+.saladbar_menu ul.menu_list > li > ul {
   display: flex;
   /* width: 100%; */
   justify-content: space-between;
 }
 
-.saladbar_menu ul.menu_list>li>ul>li {
+.saladbar_menu ul.menu_list > li > ul > li {
   width: 22%;
   height: 100%;
   display: flex;
@@ -493,7 +495,7 @@
   align-items: center;
 }
 
-.saladbar_menu ul.menu_list>li>ul>li img {
+.saladbar_menu ul.menu_list > li > ul > li img {
   width: 340px;
   height: 360px;
   object-fit: cover;
@@ -504,15 +506,14 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.saladbar_menu ul.menu_list>li.on>ul>li img.show {
+.saladbar_menu ul.menu_list > li.on > ul > li img.show {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ㅋㅋㅋㅋ */
 
-
-.saladbar_menu ul.menu_list>li>ul>li strong {
+.saladbar_menu ul.menu_list > li > ul > li strong {
   width: 220px;
   padding: 20px;
   display: block;
@@ -524,7 +525,7 @@
   box-shadow: 3px 3px 0 var(--color-red);
 }
 
-.saladbar_menu ul.menu_list>li>ul>li p {
+.saladbar_menu ul.menu_list > li > ul > li p {
   font-size: 16px;
   line-height: 22px;
   padding-top: 20px;
@@ -569,10 +570,24 @@
 }
 
 .preview {
-  transform: rotate(90deg);
+  /* writing-mode: vertical-rl; */
   white-space: nowrap;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 22px;
+  /* font-weight: bold; */
+  font-weight: 500;
+}
+
+.preview span {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+  white-space: pre;
+  /* word-spacing: -30px; */
+}
+
+/* 공백일 때 줄 간격을 줄이기 위한 클래스 */
+.preview span.space {
+  line-height: 0.4; /* 혹은 더 작게 0.3~0.6 사이에서 조절 */
 }
 
 .detail {
@@ -607,7 +622,6 @@
   z-index: 1;
 }
 
-
 .event_list.active .preview {
   display: none;
 }
@@ -627,32 +641,32 @@
 }
 
 .bg1 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
 .bg2 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
 .bg3 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
 .bg4 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
 .bg5 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
 .bg6 .detail {
-  background-image: url('../img/event01.png');
+  background-image: url("../img/event01.png");
   border-radius: 16px;
 }
 
@@ -725,7 +739,6 @@ footer .family {
   opacity: 1;
 }
 
-
 /* 무한 반복 애니메이션 */
 @keyframes slide {
   from {
@@ -736,7 +749,6 @@ footer .family {
     transform: translateX(-50%);
   }
 }
-
 
 .footer_list {
   display: flex;
@@ -772,7 +784,6 @@ footer .family {
   gap: 20px;
   color: var(--color-gray);
   font-size: 14px;
-  
 }
 
 .list_top ul li {
@@ -786,7 +797,7 @@ footer .family {
 }
 
 .list_top ul li a {
-  transition: .6s;
+  transition: 0.6s;
 }
 
 .list_top ul li:hover a {
