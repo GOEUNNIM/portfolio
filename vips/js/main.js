@@ -119,6 +119,30 @@ $(function () {
   slider.innerHTML += items;
   }); */
 
+  /* 스테이크 스와이퍼 모바일 버전 */
+  const isMobile = window.innerWidth <= 393;
+
+  const steakMobileSwiper = new Swiper('.right', {
+    effect: isMobile ? "cards" : "slide", // ✅ mobile에서만 'cards'
+    grabCursor: true,
+    loop: false,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".next",
+      prevEl: ".prev",
+    },
+    breakpoints: {
+      1025: {
+        slidesPerView: 4,
+        effect: "slide",
+        centeredSlides: false,
+      },
+    },
+  });
+
+
+
 
   /* 이벤트페이지 */
   let eventSwiper = new Swiper('.event_all', {
@@ -131,21 +155,21 @@ $(function () {
   slides.forEach(slide => {
     slide.addEventListener('click', (e) => {
       e.stopPropagation(); // 문서 클릭 이벤트 전파 막기
-  
+
       const isAlreadyActive = slide.classList.contains('active');
-  
+
       slides.forEach(s => s.classList.remove('active'));
-  
+
       if (!isAlreadyActive) {
         slide.classList.add('active');
       }
     });
   });
-  
+
   // 🧠 문서 전체 클릭 시, .event_list 영역이 아니면 active 제거
   document.addEventListener('click', (e) => {
     let isInsideEventList = e.target.closest('.event_list');
-  
+
     if (!isInsideEventList) {
       slides.forEach(s => s.classList.remove('active'));
     }

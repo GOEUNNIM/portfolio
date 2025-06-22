@@ -450,10 +450,12 @@
 }
 
 
-@media screen and (max-width: 390px) {
+
+
+@media screen and (max-width: 393px) {
     h2 {
         height: 45px;
-        list-style: 45px;
+        line-height: 45px;
         font-size: 40px;
     }
 
@@ -461,7 +463,147 @@
         display: none;
     }
 
-    /* 샐러드바 */
+    header {
+        height: 60px;
+        /* position: relative; */
+    }
+
+    header h1 {
+        width: 100px;
+    }
+
+    header nav,
+    header .h_icon .tablet {
+        display: none;
+    }
+
+    header .h_icon {
+        padding: 0 20px;
+    }
+
+    header .h_icon .mobile {
+        width: 40px;
+        height: 40px;
+        display: block !important;
+        /* position: absolute;
+        top: 50%;
+        right: 20px; */
+        color: #fff;
+        /* transform: translateY(-50%); */
+    }
+
+    header .h_icon .mobile button {
+        display: block;
+        font-size: 25px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    /* ========== 메인비주얼 ========== */
+    .main_visual {
+        height: calc(100vh - 60px);
+    }
+
+    .main_txt {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .txt2,
+    .txt4 {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .main_txt strong {
+        font-size: 50px;
+        line-height: 50px;
+        white-space: nowrap;
+        font-size: min(11vw, 390px);
+    }
+
+    .main_txt span {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+
+    .main_txt p {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .main_visual .swiper-pagination {
+        bottom: 30px;
+    }
+
+
+    /* ========== 스테이크 ========== */
+    .steak {
+        margin-top: 120px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .steak .st_con1 {
+        margin-top: 50px;
+        overflow: visible !important;
+    }
+
+    .st_con1 .st_con1_le {
+        width: 100% !important;
+        min-width: auto !important;
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .st_con1 .st_con1_le h3 {
+        font-size: 28px;
+        padding-bottom: 15px;
+    }
+
+    .st_con1 .st_con1_le p {
+        font-size: 18px;
+    }
+
+    .st_con1 .st_con1_le .more {
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 30px;
+    }
+
+
+    /* 스테이크 카드 스와이퍼 */
+    .swiper-slide {
+
+        border-radius: 20px;
+        background: #fff;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        width: 80%;
+        height: auto;
+        max-width: 320px;
+        box-sizing: border-box;
+        /* 카드 크기 조절 */
+    }
+
+    .st_con1 .right {
+        width: 100%;
+        overflow: visible;
+    }
+
+
+    /* ========== 샐러드바 ========== */
     .saladbar {
         width: 80%;
         margin-top: 150px;
@@ -516,7 +658,7 @@
         content: '▾';
         height: 0;
         left: 40%;
-        cursor: pointer; 
+        cursor: pointer;
     }
 
     .saladbar_menu ul.tab_menu li:nth-child(2),
